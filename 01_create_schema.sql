@@ -1,14 +1,17 @@
+===============================
 -- CREATE P.A.W.S. DATABASE --
 CREATE DATABASE PAWS;
 USE PAWS;
+===============================
 -- P.A.W.S. TABLES --
--- MEDICAL HISTORY --
+===============================
 -- 1) MEDICAL HISTORY --
+-- 1.1) MEDICAL HISTORY --
 	CREATE TABLE medical_history (
 	medical_history_id INT PRIMARY KEY,
     needs_desc TEXT
 );
--- 2) VACCINATIONS --
+-- 1.2) VACCINATIONS --
 	CREATE TABLE vaccinations (
     vaccination_id INT PRIMARY KEY,
     medical_history_id INT,
@@ -16,7 +19,7 @@ USE PAWS;
     vaccination_date DATE,
     FOREIGN KEY (medical_history_id) REFERENCES medical_history(medical_history_id)
 );
--- 3) MEDICATIONS --
+-- 1.3) MEDICATIONS --
 	CREATE TABLE medication (
     medication_id INT PRIMARY KEY,
     medical_history_id INT,
@@ -25,7 +28,7 @@ USE PAWS;
 	prescribed_duration VARCHAR(200), -- NEW ATTRIBUTE --
     FOREIGN KEY (medical_history_id) REFERENCES medical_history(medical_history_id)
 );
--- 4) SURGERIES --
+-- 1.4) SURGERIES --
 	CREATE TABLE surgeries (
     surgery_id INT PRIMARY KEY,
     medical_history_id INT,
@@ -36,7 +39,7 @@ USE PAWS;
 	surgery_end_time TIME, -- NEW ATTRIBUTE --
     FOREIGN KEY (medical_history_id) REFERENCES medical_history(medical_history_id)
 );
--- 5) DIAGNOSIS --
+-- 1.5) DIAGNOSIS --
 	CREATE TABLE diagnosis (
     diagnosis_id INT PRIMARY KEY,
     medical_history_id INT,
@@ -46,8 +49,9 @@ USE PAWS;
 	diagnosis_status VARCHAR(200), -- NEW ATTRIBUTE (ERADICATED, TERMINAL)--
     FOREIGN KEY (medical_history_id) REFERENCES medical_history(medical_history_id)
 );
--- PERSON --
--- 1) PERSON --
+===============================
+-- 2) PERSON --
+-- 2.1) PERSON --
 CREATE TABLE person (
     person_id INT PRIMARY KEY,
     person_first_name VARCHAR(200),
@@ -59,14 +63,14 @@ CREATE TABLE person (
     person_state VARCHAR(200),
     person_zipCode VARCHAR(200)
 );
--- 2) PHONE --
+-- 2.2) PHONE --
 CREATE TABLE phone (
     phone_id INT PRIMARY KEY,
     person_id INT,
     phone_number VARCHAR(200),
     FOREIGN KEY (person_id) REFERENCES person(person_id)
 );
--- 3) VOLUNTEER --
+-- 2.3) VOLUNTEER --
 CREATE TABLE volunteer (
     volunteer_id INT PRIMARY KEY,
     person_id INT,
@@ -81,14 +85,14 @@ CREATE TABLE volunteer (
 	FOREIGN KEY (person_id) REFERENCES person(person_id),
     FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id)
 );
--- 4) PREFERRED TASK --
+-- 2.4) PREFERRED TASK --
 CREATE TABLE preferred_task (
 	preferred_task_id INT PRIMARY KEY,
     volunteer_id INT,
     preferred_task_name VARCHAR(200),
 	FOREIGN KEY (volunteer_id) REFERENCES volunteer(volunteer_id)
 );
--- 5) EMPLOYEE --
+-- 2.5) EMPLOYEE --
 CREATE TABLE employee (
     employee_id INT PRIMARY KEY,
     person_id INT,
@@ -104,7 +108,7 @@ CREATE TABLE employee (
 	FOREIGN KEY (person_id) REFERENCES person(person_id),
 	FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id)
 );
--- 6) CERTIFICATION --
+-- 2.6) CERTIFICATION --
 CREATE TABLE certification (
 	certification_id INT PRIMARY KEY,
 	employee_id INT,
@@ -113,7 +117,7 @@ CREATE TABLE certification (
 	issued_date DATE,
 	FOREIGN KEY (employee_id) REFERENCES employee(employee_id)
 );
--- 7) ADOPTER --
+-- 2.7) ADOPTER --
 CREATE TABLE adopter (
 	adopter_id INT PRIMARY KEY,
     person_id INT,
@@ -124,7 +128,7 @@ CREATE TABLE adopter (
 	FOREIGN KEY (person_id) REFERENCES person(person_id),
     FOREIGN KEY (rent_info_id) REFERENCES rent_info(rent_info_id)
 );
--- 8) RENT INFO --
+-- 2.8) RENT INFO --
 CREATE TABLE rent_info (
 	rent_info_id INT PRIMARY KEY,
     is_rented BOOLEAN,
@@ -133,7 +137,7 @@ CREATE TABLE rent_info (
     landlord_first_name VARCHAR(200),
     landlord_last_name VARCHAR(200)
 );
--- 9) VET REFERENCES --
+-- 2.9) VET REFERENCES --
 CREATE TABLE vet_references (
 	vet_id INT PRIMARY KEY,
     adopter_id INT,
@@ -142,8 +146,9 @@ CREATE TABLE vet_references (
     vet_phone_number VARCHAR(200),
 	FOREIGN KEY (adopter_id) REFERENCES adopter(adopter_id)
 );
--- ANIMAL --
--- 1) ANIMAL --
+===============================
+-- 3) ANIMAL --
+-- 3.1) ANIMAL --
 CREATE TABLE animal (
 	animal_id INT PRIMARY KEY,
 	breed_id INT,
@@ -157,28 +162,30 @@ CREATE TABLE animal (
 	FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id),
 	FOREIGN KEY (medical_history_id) REFERENCES medical_history(medical_history_id)
 );
--- 2) BREED --
+-- 3.2) BREED --
 CREATE TABLE breed (
 	breed_id INT PRIMARY KEY,
 	breed_name VARCHAR(200),
 	breed_species VARCHAR(200)
 );
--- ENCLOSURE --
--- 1) ENCLOSURE --
+===============================
+-- 4) ENCLOSURE --
+-- 4.1) ENCLOSURE --
 CREATE TABLE enclosure (
 	enclosure_id INT PRIMARY KEY,
 	enclosure_sanitation BOOLEAN,
 	enclosure_current_capacity INT, -- NEW ATTRIBUTE --
 	enclosure_max_capacity INT
 );
--- 2) ENCLOSURE TYPE --
+-- 4.2) ENCLOSURE TYPE --
 CREATE TABLE enclosure_type (
 	enclosure_type_id INT PRIMARY KEY,
 	enclosure_id INT,
 	enclosure_type_desc TEXT,
 	FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id)
 );
--- ADOPTION --
+===============================
+-- 5) ADOPTION --
 CREATE TABLE adoption (
 	adoption_id INT PRIMARY KEY,
 	animal_id INT,
