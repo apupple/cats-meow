@@ -21,14 +21,18 @@ CREATE DATABASE PAWS;
     medical_history_id INT,
     medication_name VARCHAR(200),
     prescription_date DATE,
+	prescribed_duration VARCHAR(200), -- NEW ATTRIBUTE --
     FOREIGN KEY (medical_history_id) REFERENCES medical_history(medical_history_id)
 );
 -- 4) SURGERIES --
 	CREATE TABLE surgeries (
     surgery_id INT PRIMARY KEY,
     medical_history_id INT,
+	surgery_name VARCHAR(200), -- NEW ATTRIBUTE --
     surgery_desc TEXT,
     surgery_date DATE,
+	surgery_start_time TIME, -- NEW ATTRIBUTE --
+	surgery_end_time TIME, -- NEW ATTRIBUTE --
     FOREIGN KEY (medical_history_id) REFERENCES medical_history(medical_history_id)
 );
 -- 5) DIAGNOSIS --
@@ -38,6 +42,7 @@ CREATE DATABASE PAWS;
     diagnosis_name VARCHAR(200),
     diagnosis_date DATE,
     diagnosis_desc TEXT,
+	diagnosis_status VARCHAR(200), -- NEW ATTRIBUTE (ERADICATED, TERMINAL)--
     FOREIGN KEY (medical_history_id) REFERENCES medical_history(medical_history_id)
 );
 -- PERSON --
@@ -69,8 +74,9 @@ CREATE TABLE volunteer (
     volunteer_training_complete BOOLEAN,
     volunteer_background_check BOOLEAN,
     volunteer_total_hours INT,
-    volunteer_status VARCHAR(200),
+    volunteer_status VARCHAR(200), -- TRAINEE, CERTIFIED --
     volunteer_start_date DATE,
+	volunteer_end_date DATE, -- NEW ATTRIBUTE --
 	FOREIGN KEY (person_id) REFERENCES person(person_id),
     FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id)
 );
@@ -91,6 +97,7 @@ CREATE TABLE employee (
     employee_status VARCHAR(200),
     employee_hourly_rate DECIMAL(10,2),
     employee_start_date DATE,
+	employee_end_date DATE, -- NEW ATTRIBUTE --
 	FOREIGN KEY (person_id) REFERENCES person(person_id)
 );
 -- 6) CERTIFICATION --
@@ -99,7 +106,7 @@ CREATE TABLE certification (
 	employee_id INT,
 	certification_name VARCHAR(200).
 	issuer_name VARCHAR(200),
-	issued_date DATE
+	issued_date DATE,
 	FOREIGN KEY (employee_id) REFERENCES employee(employee_id)
 );
 -- 7) ADOPTER --
@@ -117,6 +124,7 @@ CREATE TABLE adopter (
 CREATE TABLE rent_info (
 	rent_info_id INT PRIMARY KEY,
     is_rented BOOLEAN,
+	charge_of_rent DECIMAL(10,2), -- NEW ATTRIBUTE --
     landlord_phone_number VARCHAR(200),
     landlord_first_name VARCHAR(200),
     landlord_last_name VARCHAR(200)
@@ -155,6 +163,7 @@ CREATE TABLE breed (
 CREATE TABLE enclosure (
 	enclosure_id INT PRIMARY KEY,
 	enclosure_sanitation BOOLEAN,
+	enclosure_current_capacity INT, -- NEW ATTRIBUTE --
 	enclosure_max_capacity INT
 );
 -- 2) ENCLOSURE TYPE --
