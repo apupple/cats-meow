@@ -85,12 +85,14 @@ CREATE TABLE volunteer (
 CREATE TABLE preferred_task (
 	preferred_task_id INT PRIMARY KEY,
     volunteer_id INT,
-    preferred_task_name VARCHAR(200)
+    preferred_task_name VARCHAR(200),
+	FOREIGN KEY (volunteer_id) REFERENCES volunteer(volunteer_id)
 );
 -- 5) EMPLOYEE --
 CREATE TABLE employee (
     employee_id INT PRIMARY KEY,
     person_id INT,
+	enclosure_id INT,
     employee_work_sched TEXT,
     employee_dept VARCHAR(200),
     employee_background_check BOOLEAN,
@@ -99,20 +101,21 @@ CREATE TABLE employee (
     employee_hourly_rate DECIMAL(10,2),
     employee_start_date DATE,
 	employee_end_date DATE, -- NEW ATTRIBUTE --
-	FOREIGN KEY (person_id) REFERENCES person(person_id)
+	FOREIGN KEY (person_id) REFERENCES person(person_id),
+	FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id)
 );
 -- 6) CERTIFICATION --
 CREATE TABLE certification (
 	certification_id INT PRIMARY KEY,
 	employee_id INT,
-	certification_name VARCHAR(200).
+	certification_name VARCHAR(200),
 	issuer_name VARCHAR(200),
 	issued_date DATE,
 	FOREIGN KEY (employee_id) REFERENCES employee(employee_id)
 );
 -- 7) ADOPTER --
 CREATE TABLE adopter (
-	employee_id INT PRIMARY KEY,
+	adopter_id INT PRIMARY KEY,
     person_id INT,
     rent_info_id INT,
     adopter_housing_info VARCHAR(200),
@@ -136,7 +139,8 @@ CREATE TABLE vet_references (
     adopter_id INT,
     vet_first_name VARCHAR(200),
     vet_last_name VARCHAR(200),
-    vet_phone_number VARCHAR(200)
+    vet_phone_number VARCHAR(200),
+	FOREIGN KEY (adopter_id) REFERENCES adopter(adopter_id)
 );
 -- ANIMAL --
 -- 1) ANIMAL --
