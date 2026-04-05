@@ -1,3 +1,5 @@
+-- CREATE P.A.W.S. DATABASE --
+CREATE DATABASE PAWS;
 -- P.A.W.S. TABLES --
 -- MEDICAL HISTORY --
 -- 1) MEDICAL HISTORY --
@@ -38,6 +40,8 @@
     diagnosis_desc TEXT,
     FOREIGN KEY (medical_history_id) REFERENCES medical_history(medical_history_id)
 );
+-- PERSON --
+-- 1) PERSON --
 CREATE TABLE person (
     person_id INT PRIMARY KEY,
     person_first_name VARCHAR(200),
@@ -49,12 +53,14 @@ CREATE TABLE person (
     person_state VARCHAR(200),
     person_zipCode VARCHAR(200)
 );
+-- 2) PHONE --
 CREATE TABLE phone (
     phone_id INT PRIMARY KEY,
     person_id INT,
     phone_number VARCHAR(200),
     FOREIGN KEY (person_id) REFERENCES person(person_id)
 );
+-- 3) VOLUNTEER --
 CREATE TABLE volunteer (
     volunteer_id INT PRIMARY KEY,
     person_id INT,
@@ -68,6 +74,7 @@ CREATE TABLE volunteer (
 	FOREIGN KEY (person_id) REFERENCES person(person_id),
     FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id)
 );
+-- 4) EMPLOYEE --
 CREATE TABLE employee (
     employee_id INT PRIMARY KEY,
     person_id INT,
@@ -80,11 +87,13 @@ CREATE TABLE employee (
     employee_start_date DATE,
 	FOREIGN KEY (person_id) REFERENCES person(person_id)
 );
+-- 5) PREFERRED TASK --
 CREATE TABLE preferred_task (
 	preferred_task_id INT PRIMARY KEY,
     volunteer_id INT,
     preferred_task_name VARCHAR(200)
 );
+-- 6) ADOPTER --
 CREATE TABLE adopter (
 	employee_id INT PRIMARY KEY,
     person_id INT,
@@ -95,6 +104,7 @@ CREATE TABLE adopter (
 	FOREIGN KEY (person_id) REFERENCES person(person_id),
     FOREIGN KEY (rent_info_id) REFERENCES rent_info(rent_info_id)
 );
+-- 7) RENT INFO --
 CREATE TABLE rent_info (
 	rent_info_id INT PRIMARY KEY,
     is_rented BOOLEAN,
@@ -102,6 +112,7 @@ CREATE TABLE rent_info (
     landlord_first_name VARCHAR(200),
     landlord_last_name VARCHAR(200)
 );
+-- 8) VET REFERENCES --
 CREATE TABLE vet_references (
 	vet_id INT PRIMARY KEY,
     adopter_id INT,
