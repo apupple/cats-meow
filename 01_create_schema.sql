@@ -14,7 +14,7 @@ CREATE TABLE person (
     person_street VARCHAR(200) NOT NULL,
     person_city VARCHAR(200) NOT NULL,
     person_state VARCHAR(200) NOT NULL,
-    person_zipCode VARCHAR(200) NOT NULL
+    person_zipCode INT NOT NULL
 );                                                               
 -- 2) MEDICAL HISTORY --
 CREATE TABLE medical_history (
