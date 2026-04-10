@@ -3,13 +3,61 @@
 -- ===============================
 -- 1) PERSON (person_id, person_first_name, person_last_name, person_email, person_dob, person_street, person_city, person_state, person_zipCode)--
 INSERT INTO person VALUES
--- TO:DO Zip codes strings or numbers?
-  (1, 'Light', 'Yagami', 'light.yagami@gmail.com', '2004-02-28', 'Street 1', 'San Antonio', 'TX', 78249),
-  (2, 'Gojo', 'Satoru', 'imGojo@gmail.com', '2001-12-07', 'Street 2', 'San Antonio', 'TX', 78249),
-  (3, 'Tanjiro', 'Kamado', 'tanjiro.kamado@gmail.com', '2008-03-18', 'Street 3', 'San Antonio', 'TX', 78249),
-  (4, 'Langa', 'Hasegawa', 'langa.hasegawa@gmail.com', '2007-07-12', 'Street 4', 'San Antonio', 'TX', 78249),
-  (5, 'Nancy', 'Wheeler', 'notNancyDrew@gmail.com', '1999-08-27', 'Street 5', 'San Antonio', 'TX', 78249),
-  (6, 'Will', 'Byers', 'will.byers123@gmail.com', '2007-06-15', 'Street 6', 'San Antonio', 'TX', 78249);
+  (1,'Light','Yagami','light.yagami@gmail.com','2004-02-28','1024 Shadow Lane','Los Angeles','CA','90012'), -- ANIME --
+  (2,'Gojo','Satoru','imgojo@gmail.com','2001-12-07','583 Infinity Drive','Seattle','WA','98101'),
+  (3,'Tanjiro','Kamado','tanjiro.kamado@gmail.com','2008-03-18','771 Cedar Blossom St','Denver','CO','80203'),
+  (4,'Langa','Hasegawa','langa.hasegawa@gmail.com','2007-07-12','445 Frost Rail Ave','Portland','OR','97205'),
+  (5,'Naruto','Uzumaki','naruto.uzumaki@gmail.com','2001-10-10','777 Hokage Hill Rd','Las Vegas','NV','89101'),
+  (6,'Nancy','Wheeler','notnancydrew@gmail.com','1999-08-27','210 Maple Hollow Rd','Chicago','IL','60601'), -- STRANGER THINGS --
+  (7,'Will','Byers','will.byers123@gmail.com','2007-06-15','319 Pine Shadow Dr','Austin','TX','73301'),
+  (8,'Eleven','Hopper','eleven.hopper@gmail.com','2006-11-03','888 Hawkins Crest','Nashville','TN','37201'),
+  (9,'Dustin','Henderson','dustin.h@gmail.com','2005-09-10','147 Campfire Trail','New York','NY','10001'),
+  (10,'Lucas','Sinclair','lucas.s@gmail.com','2005-01-30','664 Red Oak Blvd','Philadelphia','PA','19103'),
+  (11,'Hend','Alkittawi','hendprogrammer@gmail.com','2002-12-27','501 Gentle Breeze Way','San Diego','CA','92101'), -- PROFESSORS --
+  (12,'Samuel','Ang','notthekingsamang@gmail.com','2001-07-23','333 Raven Crest Ln','Phoenix','AZ','85001'),
+  (13,'Ramin','Sabha','sabhathegoat@gmail.com','2002-03-28','199 Blossom Path','Miami','FL','33101'),
+  (14,'Keith','Harrison','hackerharrison@gmail.com','1995-09-15','615 Silver Mask Dr','Dallas','TX','75201'),
+  (15,'Anthony','Rios','therealrios@gmail.com','1998-12-25','911 Titan Wall Rd','Atlanta','GA','30301'),
+  (17,'Eren','Yeager','eren.yeager@gmail.com','2003-03-30','420 Freedom Run','Houston','TX','77001'), -- COLOMBO --
+  (18,'Mikasa','Ackerman','mikasa.a@gmail.com','2003-02-10','421 Freedom Run','Orlando','FL','32801'),
+  (19,'Armin','Arlert','armin.a@gmail.com','2003-11-03','422 Freedom Run','Detroit','MI','48201'),
+  (20,'Jean','Kirstein','jean.k@gmail.com','2002-06-07','433 Scout Way','Columbus','OH','43004'),
+  
+  (21,'Edward','Elric','ed.elric@gmail.com','2000-02-03','12 Alchemy St','Salt Lake City','UT','84101'),
+  (22,'Alphonse','Elric','alphonse.elric@gmail.com','2001-08-15','14 Alchemy St','Minneapolis','MN','55401'),
+  (23,'Roy','Mustang','roy.mustang@gmail.com','1995-09-01','88 Flame Ave','Sacramento','CA','95814'),
+  (24,'Winry','Rockbell','winry.r@gmail.com','2001-06-09','77 Gearsmith Ln','Raleigh','NC','27601'),
+  (25,'Riza','Hawkeye','riza.h@gmail.com','1996-04-19','89 Flame Ave','Charlotte','NC','28202'),
+  
+  (26,'Ichigo','Kurosaki','ichigo.k@gmail.com','2002-07-15','600 Soul Reaper Rd','San Jose','CA','95101'),
+  (27,'Rukia','Kuchiki','rukia.k@gmail.com','2002-01-14','601 Soul Reaper Rd','Oakland','CA','94601'),
+  (28,'Renji','Abarai','renji.a@gmail.com','2001-09-04','602 Soul Reaper Rd','St. Louis','MO','63101'),
+  (29,'Byakuya','Kuchiki','byakuya.k@gmail.com','1998-01-31','900 Noble Crest','Kansas City','MO','64101'),
+  (30,'Orihime','Inoue','orihime.i@gmail.com','2003-09-03','88 Kind Heart Ln','Indianapolis','IN','46201'),
+  
+  (31,'Gon','Freecss','gon.f@gmail.com','2008-05-05','101 Hunter Trail','Boulder','CO','80301'),
+  (32,'Killua','Zoldyck','killua.z@gmail.com','2008-07-07','102 Hunter Trail','Tucson','AZ','85701'),
+  (33,'Kurapika','Kurta','kurapika.k@gmail.com','2004-04-04','103 Hunter Trail','Albuquerque','NM','87101'),
+  (34,'Leorio','Paradinight','leorio.p@gmail.com','1999-03-03','104 Hunter Trail','Omaha','NE','68101'),
+  (35,'Hisoka','Morrow','hisoka.m@gmail.com','1995-06-06','999 Phantom Ln','Las Vegas','NV','89109'),
+  
+  (36,'Batman','Wayne','bruce.wayne@gmail.com','1990-02-19','100 Gotham Ave','Newark','NJ','07102'),
+  (37,'Clark','Kent','clark.kent@gmail.com','1988-06-18','200 Krypton Way','Metropolis','IL','62960'),
+  (38,'Diana','Prince','diana.prince@gmail.com','1992-03-22','300 Amazon Blvd','Washington','DC','20001'),
+  (39,'Barry','Allen','barry.allen@gmail.com','1995-03-14','400 Speedster Dr','Cleveland','OH','44101'),
+  (40,'Hal','Jordan','hal.jordan@gmail.com','1991-02-20','500 Lantern Ln','Fort Worth','TX','76101'),
+  
+  (41,'Peter','Parker','peter.parker@gmail.com','2001-08-10','20 Queens Blvd','New York','NY','11368'),
+  (42,'Tony','Stark','tony.stark@gmail.com','1985-05-29','108 Stark Tower','Malibu','CA','90265'),
+  (43,'Steve','Rogers','steve.rogers@gmail.com','1918-07-04','1776 Freedom St','Brooklyn','NY','11201'),
+  (44,'Natasha','Romanoff','natasha.r@gmail.com','1987-11-22','88 Red Room Rd','Chicago','IL','60605'),
+  (45,'Thor','Odinson','thor.odinson@gmail.com','1980-05-01','1 Asgard Way','Seattle','WA','98109'),
+  
+  (46,'Wanda','Maximoff','wanda.m@gmail.com','1993-02-10','66 Scarlet Ln','Salem','MA','01970'),
+  (47,'Vision','Synth','vision.s@gmail.com','1995-01-01','67 Scarlet Ln','Hartford','CT','06103'),
+  (48,'Stephen','Strange','dr.strange@gmail.com','1980-02-18','177 Mystic Ave','New Orleans','LA','70112'),
+  (49,'Scott','Lang','scott.lang@gmail.com','1989-04-06','12 Quantum Rd','San Francisco','CA','94102'),
+  (50,'Hope','Van Dyne','hope.vd@gmail.com','1990-03-20','13 Quantum Rd','Las Vegas','NV','89104');
 -- 2) MEDICAL HISTORY (medical_history_id, needs_desc) --
 INSERT INTO medical_history VALUES
   (1, 'Routine wellness care for young small breed cat'),
