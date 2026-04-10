@@ -2,7 +2,6 @@
 -- P.A.W.S QUERIES --
 -- ==========================
 -- 1) Display Contact Info of All Persons --
-
 SELECT	p.person_id,
 		f_get_full_name(p.person_first_name, p.person_last_name) AS "name", 
 		GROUP_CONCAT(n.phone_number SEPARATOR ', ') AS "phone_numbers",
@@ -47,16 +46,13 @@ ORDER BY b.breed_species, animals_in_shelter DESC;
 
 -- How full is each enclosure?
 SELECT
-    e.enclosure_id,
-    e.enclosure_sanitation_status,
-    e.enclosure_max_capacity,
-    COUNT(a.animal_id) AS current_occupancy,
-    (e.enclosure_max_capacity - COUNT(a.animal_id)) AS available_spots,
-    ROUND((COUNT(a.animal_id) / e.enclosure_max_capacity) * 100, 1) AS pct_full
-FROM enclosure e
-LEFT JOIN animal a ON e.enclosure_id = a.enclosure_id
-GROUP BY e.enclosure_id, e.enclosure_sanitation_status, e.enclosure_max_capacity
-ORDER BY pct_full DESC;
+    enclosure_id,
+    enclosure_sanitation_status,
+    enclosure_max_capacity,
+    f_calculate_current_occupancy(enclosure_id) AS current_occupancy,
+    (enclosure_max_capacity - f_calculate_current_occupancy(enclosure_id)) AS available_spots,
+    ROUND(f_calculate_current_occupancy(enclosure_id) / enclosure_max_capacity * 100, 1) AS pct_full
+FROM enclosure;
 
 -- Employee Payroll
 SELECT
