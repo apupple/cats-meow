@@ -65,7 +65,7 @@ BEGIN
     FROM enclosure
     WHERE enclosure_id = NEW.enclosure_id;
 
-    IF get_enclosure_occupancy(NEW.enclosure_id) >= max_cap THEN
+    IF f_calculate_current_occupancy(NEW.enclosure_id) >= max_cap THEN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Cannot add animal: enclosure is full.';
     END IF;
@@ -86,7 +86,7 @@ BEGIN
         FROM enclosure
         WHERE enclosure_id = NEW.enclosure_id;
 
-        IF get_enclosure_occupancy(NEW.enclosure_id) >= max_cap THEN
+        IF f_calculate_current_occupancy(NEW.enclosure_id) >= max_cap THEN
             SIGNAL SQLSTATE '45000'
             SET MESSAGE_TEXT = 'Cannot move animal: target enclosure is full.';
         END IF;
