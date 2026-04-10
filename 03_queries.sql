@@ -14,7 +14,7 @@ GROUP BY p.person_ID;
 -- 2) Min/Max --
 
 
--- Adopter Information
+-- 3) Adopter Information --
 SELECT
     p.person_first_name,
     p.person_last_name,
