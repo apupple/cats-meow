@@ -89,7 +89,7 @@ FROM volunteer v
 JOIN person p ON v.person_id = p.person_id
 LEFT JOIN preferred_task pt ON v.volunteer_id = pt.volunteer_id
 WHERE v.volunteer_status = 'ACTIVE'
-  AND v.volunteer_total_hours > (
+  AND v.volunteer_total_hours >= (
       SELECT AVG(volunteer_total_hours)
       FROM volunteer
       WHERE volunteer_status = 'ACTIVE'
