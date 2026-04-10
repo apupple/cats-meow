@@ -16,14 +16,10 @@ GROUP BY p.person_ID;
 
 -- 3) Adopter Information --
 SELECT
-    p.person_first_name,
-    p.person_last_name,
+    f_get_full_name(p.person_first_name, p.person_last_name) AS full_name,
     p.person_email,
     ph.phone_number,
-    p.person_street,
-    p.person_city,
-    p.person_state,
-    p.person_zipCode,
+    f_get_address(p.person_street, p.person_city, p.person_state, p.person_zipCode) AS address,
     a.adopter_housing_info,
     a.adopter_is_fenced,
     ri.is_rented,
@@ -52,7 +48,8 @@ SELECT
     f_calculate_current_occupancy(enclosure_id) AS current_occupancy,
     (enclosure_max_capacity - f_calculate_current_occupancy(enclosure_id)) AS available_spots,
     ROUND(f_calculate_current_occupancy(enclosure_id) / enclosure_max_capacity * 100, 1) AS pct_full
-FROM enclosure;
+FROM enclosure
+ORDER BY pct_full DESC;
 
 -- Employee Payroll
 SELECT
@@ -61,8 +58,7 @@ SELECT
     MIN(e.employee_hourly_rate) AS lowest_rate,
     MAX(e.employee_hourly_rate) AS highest_rate,
     ROUND(AVG(e.employee_hourly_rate), 2) AS avg_rate,
-    p.person_first_name AS top_earner_first_name,
-    p.person_last_name AS top_earner_last_name,
+    f_get_full_name(p.person_first_name, p.person_last_name) AS top_earner,
     e.employee_job_title AS top_earner_title
 FROM employee e
 JOIN person p ON e.person_id = p.person_id
@@ -78,8 +74,7 @@ ORDER BY avg_rate DESC;
 
 -- Volunteer Hours Leaderbaord
 SELECT
-    p.person_first_name,
-    p.person_last_name,
+    f_get_full_name(p.person_first_name, p.person_last_name) AS volunteer_name,
     v.volunteer_total_hours,
     v.volunteer_status,
     v.volunteer_training_complete,

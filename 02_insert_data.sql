@@ -22,25 +22,22 @@ INSERT INTO person VALUES
   (17,'Grant','Ward','hailhydra@gmail.com','2003-02-10','421 Freedom Run','Orlando','FL','32801'),
   (18,'Leo','Fitz','leopold.fitzy@gmail.com','2003-11-03','422 Freedom Run','Detroit','MI','48201'),
   (19,'Jemma','Simmons','ughhfitz@gmail.com','2002-06-07','433 Scout Way','Columbus','OH','43004'),
-  (20,'Lance','Hunter','ladyshunter@gmail.com','2000-02-03','12 Alchemy St','Salt Lake City','UT','84101'),
-  (21,'Lieutenant','Columbo','ltcolombo@gmail.com','2001-08-15','14 Alchemy St','Minneapolis','MN','55401'), -- Columbo --
-  (22,'Oscar','Mustang','roy.mustang@gmail.com','1995-09-01','88 Flame Ave','Sacramento','CA','95814'),
-  (23,'Roy','Mustang','roy.mustang@gmail.com','1995-09-01','88 Flame Ave','Sacramento','CA','95814'),
-  (24,'Winry','Rockbell','winry.r@gmail.com','2001-06-09','77 Gearsmith Ln','Raleigh','NC','27601'),
-  (25,'Riza','Hawkeye','riza.h@gmail.com','1996-04-19','89 Flame Ave','Charlotte','NC','28202'),
-  
-  (26,'Ichigo','Kurosaki','ichigo.k@gmail.com','2002-07-15','600 Soul Reaper Rd','San Jose','CA','95101'),
-  (27,'Rukia','Kuchiki','rukia.k@gmail.com','2002-01-14','601 Soul Reaper Rd','Oakland','CA','94601'),
-  (28,'Renji','Abarai','renji.a@gmail.com','2001-09-04','602 Soul Reaper Rd','St. Louis','MO','63101'),
-  (29,'Byakuya','Kuchiki','byakuya.k@gmail.com','1998-01-31','900 Noble Crest','Kansas City','MO','64101'),
-  (30,'Orihime','Inoue','orihime.i@gmail.com','2003-09-03','88 Kind Heart Ln','Indianapolis','IN','46201'),
-  
-  (31,'Gon','Freecss','gon.f@gmail.com','2008-05-05','101 Hunter Trail','Boulder','CO','80301'),
-  (32,'Killua','Zoldyck','killua.z@gmail.com','2008-07-07','102 Hunter Trail','Tucson','AZ','85701'),
-  (33,'Kurapika','Kurta','kurapika.k@gmail.com','2004-04-04','103 Hunter Trail','Albuquerque','NM','87101'),
-  (34,'Leorio','Paradinight','leorio.p@gmail.com','1999-03-03','104 Hunter Trail','Omaha','NE','68101'),
-  (35,'Hisoka','Morrow','hisoka.m@gmail.com','1995-06-06','999 Phantom Ln','Las Vegas','NV','89109'),
-  
+  (20,'Lance','Hunter','ladieshunter@gmail.com','2000-02-03','12 Alchemy St','Salt Lake City','UT','84101'),
+  (21,'Lieutenant','Columbo','ltcolombo@gmail.com','2001-08-15','14 Alchemy St','Minneapolis','MN','55401'), -- COLUMBO --
+  (22,'Oscar','Finch','oscar.finch@gmail.com','1995-09-01','88 Flame Ave','Sacramento','CA','95814'),
+  (23,'Cathleen','Calvert','cathleen.calvert@gmail.com','1995-09-01','88 Flame Ave','Sacramento','CA','95814'),
+  (24,'George','Kramer','georgie.k@gmail.com','2001-06-09','77 Gearsmith Ln','Raleigh','NC','27601'),
+  (25,'Bart','Keppel','barty.k@gmail.com','1996-04-19','89 Flame Ave','Charlotte','NC','28202'),
+  (26,'Michael','Robinavitch','robbyray@gmail.com','2002-07-15','600 Soul Reaper Rd','San Jose','CA','95101'), -- THE PITT --
+  (27,'Heather','Collins','heather.c@gmail.com','2002-01-14','601 Soul Reaper Rd','Oakland','CA','94601'),
+  (28,'Frank','Langdon','frank.l@gmail.com','2001-09-04','602 Soul Reaper Rd','St. Louis','MO','63101'),
+  (29,'Dana','Evans','dana.e@gmail.com','1998-01-31','900 Noble Crest','Kansas City','MO','64101'),
+  (30,'Samira','Mohan','samira.m@gmail.com','2003-09-03','88 Kind Heart Ln','Indianapolis','IN','46201'),
+  (31,'Violet','Baudelaire','theinventor@gmail.com','2008-05-05','101 Hunter Trail','Boulder','CO','80301'), -- SERIES OF UNFORTUNATE EVENTS --
+  (32,'Klaus','Baudelaire','theresearcher@gmail.com','2008-07-07','102 Hunter Trail','Tucson','AZ','85701'),
+  (33,'Sunny','Baudelaire','thebiter@gmail.com','2004-04-04','103 Hunter Trail','Albuquerque','NM','87101'),
+  (34,'Count','Olaf','iamnotasnowman@gmail.com','1999-03-03','104 Hunter Trail','Omaha','NE','68101'),
+  (35,'Esme','Squalor','esme.s@gmail.com','1995-06-06','999 Phantom Ln','Las Vegas','NV','89109'),
   (36,'Bruce','Wayne','bruce.wayne@gmail.com','1990-02-19','100 Gotham Ave','Newark','NJ','07102'), -- DC --
   (37,'Clark','Kent','clark.kent@gmail.com','1988-06-18','200 Krypton Way','Metropolis','IL','62960'),
   (38,'Diana','Prince','diana.prince@gmail.com','1992-03-22','300 Amazon Blvd','Washington','DC','20001'),
@@ -51,12 +48,11 @@ INSERT INTO person VALUES
   (43,'Steve','Rogers','steve.rogers@gmail.com','1918-07-04','1776 Freedom St','Brooklyn','NY','11201'),
   (44,'Natasha','Romanoff','natasha.r@gmail.com','1987-11-22','88 Red Room Rd','Chicago','IL','60605'),
   (45,'Thor','Odinson','thor.odinson@gmail.com','1980-05-01','1 Asgard Way','Seattle','WA','98109'),
-  
-  (46,'Wanda','Maximoff','wanda.m@gmail.com','1993-02-10','66 Scarlet Ln','Salem','MA','01970'),
-  (47,'Vision','Synth','vision.s@gmail.com','1995-01-01','67 Scarlet Ln','Hartford','CT','06103'),
-  (48,'Stephen','Strange','dr.strange@gmail.com','1980-02-18','177 Mystic Ave','New Orleans','LA','70112'),
-  (49,'Scott','Lang','scott.lang@gmail.com','1989-04-06','12 Quantum Rd','San Francisco','CA','94102'),
-  (50,'Hope','Van Dyne','hope.vd@gmail.com','1990-03-20','13 Quantum Rd','Las Vegas','NV','89104');
+  (46,'Connor','Lassiter','erobert.mullard@gmail.com','1993-02-10','66 Scarlet Ln','Salem','MA','01970'), -- UNWIND --
+  (47,'Risa','Ward','risa.ward@gmail.com','1995-01-01','67 Scarlet Ln','Hartford','CT','06103'),
+  (48,'Levi','Calder','clapperwhodoesntclap@gmail.com','1980-02-18','177 Mystic Ave','New Orleans','LA','70112'),
+  (49,'Hayden','Upchurch','radiofreehayden@gmail.com','1989-04-06','12 Quantum Rd','San Francisco','CA','94102'),
+  (50,'Miracolina','Roselli','theogqueen@gmail.com','1990-03-20','13 Quantum Rd','Las Vegas','NV','89104');
 -- 2) MEDICAL HISTORY (medical_history_id, needs_desc) --
 INSERT INTO medical_history VALUES
   (1, 'Routine wellness care for young small breed cat'),
