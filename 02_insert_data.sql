@@ -87,7 +87,19 @@ INSERT INTO breed VALUES
   (1, 'Burmese', 'Felis Catus'),
   (2, 'Japanese Bobtail', 'Felis Catus'),
   (3, 'Beagle', 'Canis Lupus Familiaris'),
-  (4, 'Golden Retriever', 'Canis Lupus Familiaris');
+  (4, 'Golden Retriever', 'Canis Lupus Familiaris'),
+  (5, 'Siamese', 'Felis Catus'),
+  (6, 'Persian', 'Felis Catus'),
+  (7, 'Maine Coon', 'Felis Catus'),
+  (8, 'Bengal', 'Felis Catus'),
+  (9, 'Ragdoll', 'Felis Catus'),
+  (10, 'Scottish Fold', 'Felis Catus'),
+  (11, 'Labrador Retriever', 'Canis Lupus Familiaris'),
+  (12, 'German Shepherd', 'Canis Lupus Familiaris'),
+  (13, 'Bulldog', 'Canis Lupus Familiaris'),
+  (14, 'Poodle', 'Canis Lupus Familiaris'),
+  (15, 'Shih Tzu', 'Canis Lupus Familiaris'),
+  (16, 'Rottweiler', 'Canis Lupus Familiaris');
 -- 4) ENCLOSURE (enclosure_id, enclosure_sanitation_status, enclosure_max_capacity) --
 INSERT INTO enclosure VALUES
   (1, 'Clean', 10),
