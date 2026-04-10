@@ -18,12 +18,11 @@ INSERT INTO person VALUES
   (13,'Ramin','Sabha','sabhathegoat@gmail.com','2002-03-28','199 Blossom Path','Miami','FL','33101'),
   (14,'Keith','Harrison','hackerharrison@gmail.com','1995-09-15','615 Silver Mask Dr','Dallas','TX','75201'),
   (15,'Anthony','Rios','therealrios@gmail.com','1998-12-25','911 Titan Wall Rd','Atlanta','GA','30301'),
-  (17,'Eren','Yeager','eren.yeager@gmail.com','2003-03-30','420 Freedom Run','Houston','TX','77001'), -- COLOMBO --
-  (18,'Mikasa','Ackerman','mikasa.a@gmail.com','2003-02-10','421 Freedom Run','Orlando','FL','32801'),
-  (19,'Armin','Arlert','armin.a@gmail.com','2003-11-03','422 Freedom Run','Detroit','MI','48201'),
-  (20,'Jean','Kirstein','jean.k@gmail.com','2002-06-07','433 Scout Way','Columbus','OH','43004'),
-  
-  (21,'Edward','Elric','ed.elric@gmail.com','2000-02-03','12 Alchemy St','Salt Lake City','UT','84101'),
+  (16,'Daisy','Johnson','skyethequake@gmail.com','2003-03-30','420 Freedom Run','Houston','TX','77001'), -- A.o.S --
+  (17,'Grant','Ward','hailhydra@gmail.com','2003-02-10','421 Freedom Run','Orlando','FL','32801'),
+  (18,'Leo','Fitz','leopold.fitzy@gmail.com','2003-11-03','422 Freedom Run','Detroit','MI','48201'),
+  (19,'Jemma','Simmons','ughhfitz@gmail.com','2002-06-07','433 Scout Way','Columbus','OH','43004'),
+  (20,'Lance','Hunter','ladyshunter@gmail.com','2000-02-03','12 Alchemy St','Salt Lake City','UT','84101'),
   (22,'Alphonse','Elric','alphonse.elric@gmail.com','2001-08-15','14 Alchemy St','Minneapolis','MN','55401'),
   (23,'Roy','Mustang','roy.mustang@gmail.com','1995-09-01','88 Flame Ave','Sacramento','CA','95814'),
   (24,'Winry','Rockbell','winry.r@gmail.com','2001-06-09','77 Gearsmith Ln','Raleigh','NC','27601'),
