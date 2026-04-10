@@ -155,7 +155,7 @@ CREATE TABLE animal (
 	enclosure_id INT NOT NULL,
 	medical_history_id INT NOT NULL,
 	animal_name VARCHAR(200) NOT NULL,
-	animal_age INT (animal_age > 0),
+	animal_age INT CHECK (animal_age > 0),
 	animal_sex VARCHAR(200) CHECK (animal_sex IN ('Male', 'Female')),
 	animal_desc TEXT,
 	FOREIGN KEY (breed_id) REFERENCES breed(breed_id),
