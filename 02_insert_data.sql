@@ -98,40 +98,45 @@ INSERT INTO breed VALUES
   (15, 'Shih Tzu', 'Canis Lupus Familiaris'),
   (16, 'Rottweiler', 'Canis Lupus Familiaris');
 -- 4) ENCLOSURE (enclosure_id, enclosure_sanitation_status, enclosure_max_capacity) --
+-- Enclosures 1 & 2 = cats (young/old), 3 & 4 = dogs (young/old)
 INSERT INTO enclosure VALUES
   (1, 'Clean', 10),
-  (2, 'Dirty', 10);
+  (2, 'Clean', 10),
+  (3, 'Dirty', 10),
+  (4, 'Clean', 10);
 -- 5) RENT INFO (rent_info_id, is_rented, charge_of_rent, landlord_phone_number, landlord_first_name, landlord_last_name) --
 INSERT INTO rent_info VALUES
   (1, False, NULL, NULL, NULL, NULL),
   (2, True, 1200.00, '210-896-2488', 'Bob', 'Ross');
 -- 6) ANIMAL (animal_id, breed_id, enclosure_id, medical_history_id, animal_name, animal_age, animal_sex, animal_desc) --
+-- enclosure_id logic: cats < 12 months = 1, cats >= 12 months = 2
+--                     dogs < 12 months = 3, dogs >= 12 months = 4
 INSERT INTO animal VALUES
-  (1, 1, 1, 1, 'Bella', 2, 'F', 'small brown fluffy baby'),
-  (2, 2, 1, 2, 'Miso', 3, 'M', 'adult white orange and black short hair'),
-  (3, 3, 2, 3, 'Turbo', 1, 'M', 'baby spotted'),
-  (4, 4, 2, 4, 'Goldie', 4, 'F', 'adult large playful and fluffy'),
-  (5, 5, 1, 5, 'Shadow', 36, 'M', 'senior sleek dark brown short hair'),
-  (6, 6, 1, 6, 'Mango', 5, 'F', 'young white and orange long fluffy coat'),
-  (7, 7, 1, 7, 'Luna', 8, 'F', 'adult large tufted ears bushy tail'),
-  (8, 8, 1, 8, 'Biscuit', 14, 'M', 'adult spotted golden and black short hair'),
-  (9, 9, 1, 9, 'Whiskers', 48, 'M', 'senior blue eyes large and docile long hair'),
-  (10, 10, 1, 10, 'Cleo', 7, 'F', 'adult folded ears gray and white short hair'),
-  (11, 5, 1, 11, 'Oreo', 4, 'M', 'young dark brown with cream points'),
-  (12, 6, 1, 12, 'Hazel', 2, 'F', 'baby white flat face fluffy'),
-  (13, 7, 1, 13, 'Pumpkin', 6, 'M', 'young orange large shaggy coat'),
-  (14, 8, 1, 14, 'Nala', 10, 'F', 'adult rosette patterned sleek golden'),
-  (15, 11, 2, 15, 'Peanut', 3, 'M', 'baby yellow short coat floppy ears'),
-  (16, 12, 2, 16, 'Daisy', 6, 'F', 'young tan and black alert and lean'),
-  (17, 13, 2, 17, 'Rex', 18, 'M', 'adult stocky wrinkled face brindle'),
-  (18, 14, 2, 18, 'Maple', 9, 'F', 'young apricot curly coat medium size'),
-  (19, 15, 2, 19, 'Bruno', 24, 'M', 'adult black and white long silky coat'),
-  (20, 16, 2, 20, 'Rosie', 12, 'F', 'adult black and tan large muscular build'),
-  (21, 11, 2, 21, 'Zeus', 10, 'M', 'young chocolate short coat energetic'),
-  (22, 12, 2, 22, 'Coco', 3, 'F', 'baby sable with black saddle pattern'),
-  (23, 13, 2, 23, 'Buster', 30, 'M', 'adult white and brown stocky and calm'),
-  (24, 14, 2, 24, 'Penny', 7, 'F', 'young silver curly coat playful'),
-  (25, 15, 2, 25, 'Duke', 60, 'M', 'senior gold and white long silky coat gentle');
+  (1,  1,  1, 1,  'Bella',    2,  'F', 'small brown fluffy baby'),
+  (2,  2,  1, 2,  'Miso',     3,  'M', 'adult white orange and black short hair'),
+  (3,  3,  3, 3,  'Turbo',    1,  'M', 'baby spotted'),
+  (4,  4,  4, 4,  'Goldie',   4,  'F', 'adult large playful and fluffy'),
+  (5,  5,  2, 5,  'Shadow',   36, 'MALE', 'senior sleek dark brown short hair'),
+  (6,  6,  1, 6,  'Mango',    5,  'F', 'young white and orange long fluffy coat'),
+  (7,  7,  1, 7,  'Luna',     8,  'F', 'adult large tufted ears bushy tail'),
+  (8,  8,  2, 8,  'Biscuit',  14, 'MALE', 'adult spotted golden and black short hair'),
+  (9,  9,  2, 9,  'Whiskers', 48, 'MALE', 'senior blue eyes large and docile long hair'),
+  (10, 10, 1, 10, 'Cleo',     7,  'F', 'adult folded ears gray and white short hair'),
+  (11, 5,  1, 11, 'Oreo',     4,  'M', 'young dark brown with cream points'),
+  (12, 6,  1, 12, 'Hazel',    2,  'F', 'baby white flat face fluffy'),
+  (13, 7,  1, 13, 'Pumpkin',  6,  'M', 'young orange large shaggy coat'),
+  (14, 8,  2, 14, 'Nala',     10, 'FEMALE', 'adult rosette patterned sleek golden'),
+  (15, 11, 3, 15, 'Peanut',   3,  'M', 'baby yellow short coat floppy ears'),
+  (16, 12, 3, 16, 'Daisy',    6,  'F', 'young tan and black alert and lean'),
+  (17, 13, 4, 17, 'Rex',      18, 'MALE', 'adult stocky wrinkled face brindle'),
+  (18, 14, 3, 18, 'Maple',    9,  'F', 'young apricot curly coat medium size'),
+  (19, 15, 4, 19, 'Bruno',    24, 'MALE', 'adult black and white long silky coat'),
+  (20, 16, 4, 20, 'Rosie',    12, 'FEMALE', 'adult black and tan large muscular build'),
+  (21, 11, 3, 21, 'Zeus',     10, 'MALE', 'young chocolate short coat energetic'),
+  (22, 12, 3, 22, 'Coco',     3,  'F', 'baby sable with black saddle pattern'),
+  (23, 13, 4, 23, 'Buster',   30, 'MALE', 'adult white and brown stocky and calm'),
+  (24, 14, 3, 24, 'Penny',    7,  'F', 'young silver curly coat playful'),
+  (25, 15, 4, 25, 'Duke',     60, 'MALE', 'senior gold and white long silky coat gentle');
 -- 7) PHONE (phone_id, person_id, phone_number) --
 INSERT INTO phone VALUES
   (1, 1, '210-123-4567'),
