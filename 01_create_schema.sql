@@ -1,10 +1,9 @@
-===============================
+-- ===============================
 -- CREATE P.A.W.S. DATABASE --
 CREATE DATABASE PAWS;
 USE PAWS;
-===============================
--- P.A.W.S. TABLES --
-===============================
+-- -- P.A.W.S. TABLES --
+-- ===============================
 -- 1) PERSON --
 CREATE TABLE person (
     person_id INT PRIMARY KEY,
@@ -32,9 +31,9 @@ CREATE TABLE breed (
 -- 4) ENCLOSURE --
 CREATE TABLE enclosure (
 	enclosure_id INT PRIMARY KEY,
-	enclosure_sanitation_status VARCHAR(200) DEFAULT 'CLEAN' CHECK (enclosure_sanitation IN ('CLEAN', 'DIRTY')),
-	enclosure_max_capacity INT NOT NULL CHECK (enclosure_max_capacity > 0),
-	enclosure_current_capacity INT DEFAULT 0 CHECK (enclosure_current_capacity <= enclosure_max_capacity) -- NEW ATTRIBUTE --
+	enclosure_sanitation_status VARCHAR(200) DEFAULT 'CLEAN' CHECK (enclosure_sanitation_status IN ('CLEAN', 'DIRTY')),
+	enclosure_max_capacity INT NOT NULL CHECK (enclosure_max_capacity > 0)
+	-- enclosure_current_capacity INT DEFAULT 0 CHECK (enclosure_current_capacity <= enclosure_max_capacity) -- NEW ATTRIBUTE --
 );
 -- 5) RENT INFO --
 CREATE TABLE rent_info (
@@ -89,7 +88,7 @@ CREATE TABLE employee (
     employee_status VARCHAR(200) CHECK (employee_status IN ('EMPLOYED', 'TERMINATED')),
     employee_hourly_rate DECIMAL(10,2) CHECK (employee_hourly_rate >= 0),
     employee_start_date DATE,
-	employee_end_date DATE CHECK (employee_end_date IS NULL OR employee_end_date >= employee_start_date), -- NEW ATTRIBUTE --
+	employee_end_date DATE, -- CHECK (employee_end_date IS NULL OR employee_end_date >= employee_start_date), -- NEW ATTRIBUTE --
 	FOREIGN KEY (person_id) REFERENCES person(person_id),
 	FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id) ON DELETE SET NULL
 );
@@ -104,9 +103,9 @@ CREATE TABLE volunteer (
     volunteer_total_hours INT DEFAULT 0 CHECK (volunteer_total_hours >= 0),
     volunteer_status VARCHAR(200) CHECK (volunteer_status IN ('ACTIVE', 'INACTIVE')), -- TRAINEE, CERTIFIED --
     volunteer_start_date DATE,
-	volunteer_end_date DATE CHECK (volunteer_end_date IS NULL OR volunteer_end_date >= volunteer_start_date), -- NEW ATTRIBUTE --
+	volunteer_end_date DATE, -- CHECK (volunteer_end_date IS NULL OR volunteer_end_date >= volunteer_start_date), -- NEW ATTRIBUTE --
 	FOREIGN KEY (person_id) REFERENCES person(person_id),
-    FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id) ON DELETE SET NULL
+    FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id) -- ON DELETE SET NULL
 );
 -- 11) CERTIFICATION --
 CREATE TABLE certification (
@@ -138,9 +137,9 @@ CREATE TABLE adoption (
 	adoption_id INT PRIMARY KEY,
 	animal_id INT NOT NULL,
 	adopter_id INT NOT NULL,
-	adoption_status CHECK (adoption_status IN ('PENDING', 'APPROVED', 'COMPLETED', 'REJECTED', 'RETURNED')),
+	adoption_status VARCHAR(200) CHECK (adoption_status IN ('PENDING', 'APPROVED', 'COMPLETED', 'REJECTED', 'RETURNED')),
 	adoption_start_date DATE,
-	adoption_end_date DATE CHECK (adoption_end_date IS NULL OR adoption_end_date >= adoption_start_date),
+	adoption_end_date DATE, -- CHECK (adoption_end_date IS NULL OR adoption_end_date >= adoption_start_date),
 	FOREIGN KEY (animal_id) REFERENCES animal(animal_id),
 	FOREIGN KEY (adopter_id) REFERENCES adopter(adopter_id)
 );
@@ -168,8 +167,8 @@ CREATE TABLE vaccinations (
 	surgery_name VARCHAR(200) NOT NULL, -- NEW ATTRIBUTE --
     surgery_desc TEXT NOT NULL,
     surgery_date DATE NOT NULL,
-	surgery_start_time TIME NOT NULL, -- NEW ATTRIBUTE --
-	surgery_end_time TIME NOT NULL CHECK (surgery_end_time IS NOT NULL OR surgery_end_time >= surgery_start_time), -- NEW ATTRIBUTE --
+	-- surgery_start_time TIME NOT NULL, -- NEW ATTRIBUTE --
+	-- surgery_end_time TIME NOT NULL CHECK (surgery_end_time IS NOT NULL OR surgery_end_time >= surgery_start_time), -- NEW ATTRIBUTE --
     FOREIGN KEY (medical_history_id) REFERENCES medical_history(medical_history_id) ON DELETE CASCADE
 );
 -- 18) DIAGNOSIS --
