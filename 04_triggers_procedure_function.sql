@@ -43,5 +43,45 @@ DELIMITER ;
 
 -- TRIGGERS --
 
+-- 1) Insert animal check: check occupancy before inserting an animal
+DELIMITER //
+CREATE TRIGGER trg_insert_animal_check
+BEFORE INSERT ON animal
+FOR EACH ROW
+BEGIN
+	DECLARE max_cap INT;
 
+    SELECT enclosure_max_capacity
+    INTO max_cap
+    FROM enclosure
+    WHERE enclosure_id = NEW.enclosure_id;
+
+    IF get_enclosure_occupancy(NEW.enclosure_id) >= max_cap THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Cannot add animal: enclosure is full.';
+    END IF;
+END //
+DELIMITER ;
+
+-- 2) Update animal check: check occupancy before updating an animal
+DELIMITER //
+CREATE TRIGGER trg_update_animal_check
+BEFORE UPDATE ON animal
+FOR EACH ROW
+BEGIN
+    DECLARE max_cap INT;
+
+    IF NEW.enclosure_id <> OLD.enclosure_id THEN
+        SELECT enclosure_max_capacity
+        INTO max_cap
+        FROM enclosure
+        WHERE enclosure_id = NEW.enclosure_id;
+
+        IF get_enclosure_occupancy(NEW.enclosure_id) >= max_cap THEN
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Cannot move animal: target enclosure is full.';
+        END IF;
+    END IF;
+END//
+DELIMITER ;
 -- PROCEDURES --
