@@ -203,8 +203,8 @@ INSERT INTO vaccinations VALUES
   (24, 22, 'Rabies', '2024-09-09'),
   (25, 23, 'FVRCP', '2023-11-03'),
   (26, 24, 'Rabies', '2023-11-03'),
-  (27, 24, 'DHPP', '2024-01-25'),
-  (28, 25, 'Bordetella', '2024-01-25');
+  (27, 24, 'DHPP', '2024-01-25');
+  
 -- 16) MEDICATIONS (medication_id, medical_history_id, medication_name, prescription_date, prescribed_duration) --
 INSERT INTO medications VALUES
   (1, 1, 'Revolution Plus (flea/tick)', '2024-03-10', 'Ongoing monthly'),
@@ -217,7 +217,7 @@ INSERT INTO medications VALUES
   (8, 5, 'Ivermectin', '2024-07-19', '5 days'),
   (9, 9, 'Amoxicillin', '2023-11-03', '10 days'),
   (10, 10, 'Prednisone', '2024-01-25', '5 days'),
-  (11 13, 'Revolution Plus (flea/tick)', '2023-06-18', 'Ongoing monthly'),
+  (11, 13, 'Revolution Plus (flea/tick)', '2023-06-18', 'Ongoing monthly'),
   (12, 12, 'Simparica Trio', '2023-10-10', 'Ongoing monthly'),
   (13, 11, 'Panacur (dewormer)', '2024-03-03', '3 days'),
   (14, 14, 'Doxycycline', '2024-08-08', '10 days'),
@@ -255,8 +255,8 @@ INSERT INTO surgeries VALUES
   (20, 21, 'NEUTER', 'Routine neuter surgery completed successfully', '2024-08-25'),
   (21, 22, 'SPAY', 'Routine spay surgery completed successfully', '2024-09-10'),
   (22, 23, 'NEUTER', 'Routine neuter surgery completed successfully', '2024-10-12'),
-  (23, 24, 'SPAY', 'Routine spay surgery completed successfully', '2024-11-15'),
-  (24, 25, 'NEUTER', 'Routine neuter surgery completed successfully', '2024-12-01');
+  (23, 24, 'SPAY', 'Routine spay surgery completed successfully', '2024-11-15');
+  
 -- 18) DIAGNOSIS (diagnosis_id, medical_history_id, diagnosis_name, diagnosis_date, diagnosis_desc, diagnosis_status) --
 INSERT INTO diagnosis VALUES
   (1, 1, 'Ear Mites', '2024-07-22', 'Infestation of Otodectes cynotis detected in both ears treated with topical medication', 'ERADICATED'),
