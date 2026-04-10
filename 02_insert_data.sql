@@ -50,18 +50,18 @@ INSERT INTO adopter VALUES
   (2, 6, 2, 'apartment with mom and brother', FALSE, '8 hours M-F');
 -- 9) EMPLOYEE (employee_id, person_id, enclosure_id, employee_work_sched, employee_dept, employee_background_check, employee_job_title, employee_status, employee_hourly_rate, employee_start_date, employee_end_date) --
 INSERT INTO employee VALUES
-  (1, 1, 1, 'M-F opening to closing', 'adoption', TRUE, 'MANAGER', 'EMPLOYED', 18.5, '07/23/22', NULL),
-  (1, 2, 2, 'M-F opening to closing & weekends as needed', 'animal care', TRUE, 'MANAGER', 'EMPLOYED', 18.5, '07/23/22', NULL);
+  (1, 1, 1, 'M-F opening to closing', 'adoption', TRUE, 'MANAGER', 'EMPLOYED', 18.5, '2022-07-23', NULL),
+  (2, 2, 2, 'M-F opening to closing & weekends as needed', 'animal care', TRUE,'MANAGER', 'EMPLOYED', 18.5, '2022-07-23', NULL);
 -- 10) VOLUNTEER (volunteer_id, person_id, enclosure_id, volunteer_availability_sched, volunteer_training_complete, volunteer_background_check, volunteer_total_hours, volunteer_status, volunteer_start_date, volunteer_end_date) --
 INSERT INTO volunteer VALUES
-  (1, 3, 1, 'MWF 1 PM to 6 PM', TRUE, TRUE, 10,  'ACTIVE', '12/03/25', NULL),
+  (1, 3, 1, 'MWF 1 PM to 6 PM', TRUE, TRUE, 10,  'ACTIVE', '2025-12-03', NULL),
   (2, 5, 2, 'TTh 9 AM to 5 PM', FALSE, TRUE, 0, 'INACTIVE', NULL, NULL);
 -- 11) CERTIFICATION (certification_id, employee_id, certification_name, issuer_name, issued_date) --
 INSERT INTO certification VALUES
-  (1, 1, 'Veterinary Technician National Exam (VTNE)', 'American Association of Veterinary State Boards', '03/15/21'),
-  (2, 1, 'Pet CPR and First Aid', 'American Red Cross', '06/10/22'),
-  (3, 2, 'Certified Veterinary Assistant (CVA)', 'National Association of Veterinary Technicians in America', '08/22/20'),
-  (4, 2, 'Fear Free Veterinary Certification', 'Fear Free LLC', '11/05/23');
+  (1, 1, 'Veterinary Technician National Exam (VTNE)', 'American Association of Veterinary State Boards', '2021-03-15'),
+  (2, 1, 'Pet CPR and First Aid', 'American Red Cross', '2022-06-10'),
+  (3, 2, 'Certified Veterinary Assistant (CVA)', 'National Association of Veterinary Technicians in America', '2020-08-22'),
+  (4, 2, 'Fear Free Veterinary Certification', 'Fear Free LLC', '2023-11-05');
 -- 12) PREFERRED TASK (preferred_task_id, volunteer_id, preferred_task_name) --
 INSERT INTO preferred_task VALUES
   (1, 1, 'cleaning and playing with animals'),
@@ -74,34 +74,34 @@ INSERT INTO vet_references VALUES
   (2, 2, 'Sandra', 'Kowalski', '210-555-0392');
 -- 14) ADOPTION (adoption_id, animal_id, adopter_id, adoption_status, adoption_start_date, adoption_end_date) --
 INSERT INTO adoption VALUES
-  (1, 4, 1, TRUE, '01/10/25', '01/24/25'),
-  (2, 1, 2, FALSE, '03/15/25', NULL);
+  (1, 4, 1, 'COMPLETED', '2025-01-10', '2025-01-24'),
+  (2, 1, 2, 'RETURNED', '2025-03-15', NULL);
 -- 15) VACCINATIONS (vaccination_id, medical_history_id, vaccination_name, vaccination_date) --
 INSERT INTO vaccinations VALUES
-  (1, 1, 'FVRCP', '03/10/23'),
-  (2, 1, 'Rabies', '03/10/24'),
-  (1, 2, 'FVRCP', '08/15/23'),
-  (2, 2, 'Rabies', '08/15/23'),
-  (3, 3, 'DHPP (First Round)', '01/20/23'),
-  (3, 4, 'DHPP', '06/05/24'),
-  (2, 4, 'Rabies', '06/05/24');
+  (1, 1, 'FVRCP', '2023-03-10'),
+  (2, 1, 'Rabies', '2024-03-10'),
+  (3, 2, 'FVRCP', '2023-08-15'),
+  (4, 2, 'Rabies', '2023-08-15'),
+  (5, 3, 'DHPP (First Round)', '2023-01-20'),
+  (6, 4, 'DHPP', '2024-06-05'),
+  (7, 4, 'Rabies', '2024-06-05');
 -- 16) MEDICATIONS (medication_id, medical_history_id, medication_name, prescription_date, prescribed_duration) --
 INSERT INTO medications VALUES
-  (1, 1, 'Revolution Plus (flea/tick)', '03/10/24', 'Ongoing monthly'),
-  (1, 2, 'Revolution Plus (flea/tick)', '08/15/23', 'Ongoing monthly'),
-  (3, 3, 'Panacur (dewormer)', 01/02/25, '3 days'),
-  (4, 4, 'Simparica Trio (flea/tick/heartworm)', '06/05/24', 'Ongoing monthly');
+  (1, 1, 'Revolution Plus (flea/tick)', '2024-03-10', 'Ongoing monthly'),
+  (2, 2, 'Revolution Plus (flea/tick)', '2023-08-15', 'Ongoing monthly'),
+  (3, 3, 'Panacur (dewormer)', '2025-01-02', '3 days'),
+  (4, 4, 'Simparica Trio (flea/tick/heartworm)', '2024-06-05', 'Ongoing monthly');
 -- 17) SURGERIES (surgery_id, medical_history_id, surgery_name, surgery_desc, surgery_date) --
 INSERT INTO surgeries VALUES
-  (1, 1, 'SPAY', 'Routine ovariohysterectomy performed without complications', '05/12/24'),
-  (2, 2, 'NEUTER', 'Routine orchiectomy performed without complications', '10/03/23'),
-  (1, 4, 'SPAY', 'Routine ovariohysterectomy performed without complications', '08/14/24');
+  (1, 1, 'SPAY', 'Routine ovariohysterectomy performed without complications', '2024-05-12'),
+  (2, 2, 'NEUTER', 'Routine orchiectomy performed without complications', '2023-10-03'),
+  (3, 4, 'SPAY', 'Routine ovariohysterectomy performed without complications','2024-08-14');
 -- 18) DIAGNOSIS (diagnosis_id, medical_history_id, diagnosis_name, diagnosis_date, diagnosis_desc, diagnosis_status) --
 INSERT INTO diagnosis VALUES
-  (1, 1, 'Ear Mites', '07/22/24', 'Infestation of Otodectes cynotis detected in both ears treated with topical medication', 'ERADICATED'),
-  (1, 2, 'Ear Mites', '11/10/23', 'Infestation of Otodectes cynotis detected in both ears treated with topical medication', 'ERADICATED'),
-  (3, 3, 'Intestinal Parasites', '01/20/25', 'Roundworm infection detected via fecal float test in routine puppy screening', 'ERADICATED'),
-  (4, 4, 'Kennel Cough', '06/05/24', 'Mild bordetella infection presenting with persistent cough and nasal discharge treated with antibiotics', 'ERADICATED');
+  (1, 1, 'Ear Mites', '2024-07-22', 'Infestation of Otodectes cynotis detected in both ears treated with topical medication', 'ERADICATED'),
+  (2, 2, 'Ear Mites', '2023-11-10', 'Infestation of Otodectes cynotis detected in both ears treated with topical medication', 'ERADICATED'),
+  (3, 3, 'Intestinal Parasites', '2025-01-20', 'Roundworm infection detected via fecal float test in routine puppy screening', 'ERADICATED'),
+  (4, 4, 'Kennel Cough', '2024-06-05', 'Mild bordetella infection presenting with persistent cough and nasal discharge treated with antibiotics', 'ERADICATED');
 -- 19) ENCLOSURE TYPE (enclosure_type_id, enclosure_id, enclosure_type_desc) --
 INSERT INTO enclosure_type VALUES
   (1, 1, 'Indoor feline enclosure with multi-level climbing shelves - cozy bedding - and enrichment toys for small to medium-sized cats'),
