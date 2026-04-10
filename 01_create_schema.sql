@@ -86,7 +86,7 @@ CREATE TABLE employee (
     employee_dept VARCHAR(200),
     employee_background_check BOOLEAN DEFAULT FALSE,
     employee_job_title VARCHAR(200),
-    employee_status VARCHAR(200) CHECK (employee_status IN ('EMPLOYEE', 'MANAGER')),
+    employee_status VARCHAR(200) CHECK (employee_status IN ('EMPLOYED', 'TERMINATED')),
     employee_hourly_rate DECIMAL(10,2) CHECK (employee_hourly_rate >= 0),
     employee_start_date DATE,
 	employee_end_date DATE CHECK (employee_end_date IS NULL OR employee_end_date >= employee_start_date), -- NEW ATTRIBUTE --
