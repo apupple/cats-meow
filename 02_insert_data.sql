@@ -23,7 +23,8 @@ INSERT INTO person VALUES
   (18,'Leo','Fitz','leopold.fitzy@gmail.com','2003-11-03','422 Freedom Run','Detroit','MI','48201'),
   (19,'Jemma','Simmons','ughhfitz@gmail.com','2002-06-07','433 Scout Way','Columbus','OH','43004'),
   (20,'Lance','Hunter','ladyshunter@gmail.com','2000-02-03','12 Alchemy St','Salt Lake City','UT','84101'),
-  (22,'Alphonse','Elric','alphonse.elric@gmail.com','2001-08-15','14 Alchemy St','Minneapolis','MN','55401'),
+  (21,'Lieutenant','Columbo','ltcolombo@gmail.com','2001-08-15','14 Alchemy St','Minneapolis','MN','55401'), -- Columbo --
+  (22,'Oscar','Mustang','roy.mustang@gmail.com','1995-09-01','88 Flame Ave','Sacramento','CA','95814'),
   (23,'Roy','Mustang','roy.mustang@gmail.com','1995-09-01','88 Flame Ave','Sacramento','CA','95814'),
   (24,'Winry','Rockbell','winry.r@gmail.com','2001-06-09','77 Gearsmith Ln','Raleigh','NC','27601'),
   (25,'Riza','Hawkeye','riza.h@gmail.com','1996-04-19','89 Flame Ave','Charlotte','NC','28202'),
