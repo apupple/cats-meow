@@ -287,8 +287,7 @@ INSERT INTO diagnosis VALUES
   (26, 16, 'Ear Infection', '2023-12-05', 'Bacterial infection treated with drops', 'ERADICATED'),
   (27, 17, 'Worms', '2024-02-14', 'Hookworm infection treated successfully', 'ERADICATED'),
   (28, 18, 'Respiratory Infection', '2024-04-18', 'Mild infection treated with antibiotics', 'ERADICATED'),
-  (29, 24, 'Flea Infestation', '2024-06-22', 'Fleas treated with topical medication', 'ERADICATED'),
-  (30, 25, 'Ear Mites', '2024-07-30', 'Parasites eliminated with treatment', 'ERADICATED');
+  (29, 24, 'Flea Infestation', '2024-06-22', 'Fleas treated with topical medication', 'ERADICATED');
 -- 19) ENCLOSURE TYPE (enclosure_type_id, enclosure_id, enclosure_type_desc) --
 INSERT INTO enclosure_type VALUES
   (1, 1, 'Indoor feline enclosure with multi-level climbing shelves - cozy bedding - and enrichment toys for small to medium-sized cats'),
