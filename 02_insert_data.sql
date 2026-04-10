@@ -65,9 +65,9 @@ INSERT INTO certification VALUES
 -- 12) PREFERRED TASK (preferred_task_id, volunteer_id, preferred_task_name) --
 INSERT INTO preferred_task VALUES
   (1, 1, 'cleaning and playing with animals'),
-  (1, 2, 'playing with animals'),
-  (2, 2, 'logistical tasks'),
-  (3, 2, 'adoption paperwork');
+  (2, 2, 'playing with animals'),
+  (3, 2, 'logistical tasks'),
+  (4, 2, 'adoption paperwork');
 -- 13) VET REFERENCES (vet_id, adopter_id, vet_first_name, vet_last_name, vet_phone_number) --
 INSERT INTO vet_references VALUES
   (1, 1, 'James', 'Harrington', '210-555-0174'),
