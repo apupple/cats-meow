@@ -40,13 +40,12 @@ INSERT INTO person VALUES
   (34,'Leorio','Paradinight','leorio.p@gmail.com','1999-03-03','104 Hunter Trail','Omaha','NE','68101'),
   (35,'Hisoka','Morrow','hisoka.m@gmail.com','1995-06-06','999 Phantom Ln','Las Vegas','NV','89109'),
   
-  (36,'Batman','Wayne','bruce.wayne@gmail.com','1990-02-19','100 Gotham Ave','Newark','NJ','07102'),
+  (36,'Bruce','Wayne','bruce.wayne@gmail.com','1990-02-19','100 Gotham Ave','Newark','NJ','07102'), -- DC --
   (37,'Clark','Kent','clark.kent@gmail.com','1988-06-18','200 Krypton Way','Metropolis','IL','62960'),
   (38,'Diana','Prince','diana.prince@gmail.com','1992-03-22','300 Amazon Blvd','Washington','DC','20001'),
   (39,'Barry','Allen','barry.allen@gmail.com','1995-03-14','400 Speedster Dr','Cleveland','OH','44101'),
   (40,'Hal','Jordan','hal.jordan@gmail.com','1991-02-20','500 Lantern Ln','Fort Worth','TX','76101'),
-  
-  (41,'Peter','Parker','peter.parker@gmail.com','2001-08-10','20 Queens Blvd','New York','NY','11368'),
+  (41,'Peter','Parker','peter.parker@gmail.com','2001-08-10','20 Queens Blvd','New York','NY','11368'), -- MARVEL --
   (42,'Tony','Stark','tony.stark@gmail.com','1985-05-29','108 Stark Tower','Malibu','CA','90265'),
   (43,'Steve','Rogers','steve.rogers@gmail.com','1918-07-04','1776 Freedom St','Brooklyn','NY','11201'),
   (44,'Natasha','Romanoff','natasha.r@gmail.com','1987-11-22','88 Red Room Rd','Chicago','IL','60605'),
