@@ -101,7 +101,7 @@ INSERT INTO breed VALUES
 -- Enclosures 1 & 2 = cats (young/old), 3 & 4 = dogs (young/old)
 INSERT INTO enclosure VALUES
   (1, 'Clean', 10),
-  (2, 'Clean', 10),
+  (2, 'Dirty', 10),
   (3, 'Dirty', 10),
   (4, 'Clean', 10);
 -- 5) RENT INFO (rent_info_id, is_rented, charge_of_rent, landlord_phone_number, landlord_first_name, landlord_last_name) --
