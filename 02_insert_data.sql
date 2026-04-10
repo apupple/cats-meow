@@ -4,12 +4,12 @@
 -- 1) PERSON (person_id, person_first_name, person_last_name, person_email, person_dob, person_street, person_city, person_state, person_zipCode)--
 INSERT INTO person VALUES
 -- TO:DO Zip codes strings or numbers?
-  (1, 'Light', 'Yagami', 'light.yagami@gmail.com', '2004-02-28', 'Street 1', 'San Antonio', 'TX', '78249'),
-  (2, 'Gojo', 'Satoru', 'imGojo@gmail.com', '2001-12-07', 'Street 2', 'San Antonio', 'TX', '78249'),
-  (3, 'Tanjiro', 'Kamado', 'tanjiro.kamado@gmail.com', '2008-03-18', 'Street 3', 'San Antonio', 'TX', '78249'),
-  (4, 'Langa', 'Hasegawa', 'langa.hasegawa@gmail.com', '2007-07-12', 'Street 4', 'San Antonio', 'TX', '78249'),
-  (5, 'Nancy', 'Wheeler', 'notNancyDrew@gmail.com', '1999-08-27', 'Street 5', 'San Antonio', 'TX', '78249'),
-  (6, 'Will', 'Byers', 'will.byers123@gmail.com', '2007-06-15', 'Street 6', 'San Antonio', 'TX', '78249');
+  (1, 'Light', 'Yagami', 'light.yagami@gmail.com', '2004-02-28', 'Street 1', 'San Antonio', 'TX', 78249),
+  (2, 'Gojo', 'Satoru', 'imGojo@gmail.com', '2001-12-07', 'Street 2', 'San Antonio', 'TX', 78249),
+  (3, 'Tanjiro', 'Kamado', 'tanjiro.kamado@gmail.com', '2008-03-18', 'Street 3', 'San Antonio', 'TX', 78249),
+  (4, 'Langa', 'Hasegawa', 'langa.hasegawa@gmail.com', '2007-07-12', 'Street 4', 'San Antonio', 'TX', 78249),
+  (5, 'Nancy', 'Wheeler', 'notNancyDrew@gmail.com', '1999-08-27', 'Street 5', 'San Antonio', 'TX', 78249),
+  (6, 'Will', 'Byers', 'will.byers123@gmail.com', '2007-06-15', 'Street 6', 'San Antonio', 'TX', 78249);
 -- 2) MEDICAL HISTORY (medical_history_id, needs_desc) --
 INSERT INTO medical_history VALUES
   (1, 'Routine wellness care for young small breed cat'),
