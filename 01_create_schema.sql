@@ -32,7 +32,7 @@ CREATE TABLE breed (
 -- 4) ENCLOSURE --
 CREATE TABLE enclosure (
 	enclosure_id INT PRIMARY KEY,
-	enclosure_sanitation-status VARCHAR(200) DEFAULT 'CLEAN' CHECK (enclosure_sanitation IN ('CLEAN', 'DIRTY')),
+	enclosure_sanitation_status VARCHAR(200) DEFAULT 'CLEAN' CHECK (enclosure_sanitation IN ('CLEAN', 'DIRTY')),
 	enclosure_max_capacity INT NOT NULL CHECK (enclosure_max_capacity > 0),
 	enclosure_current_capacity INT DEFAULT 0 CHECK (enclosure_current_capacity <= enclosure_max_capacity) -- NEW ATTRIBUTE --
 );
