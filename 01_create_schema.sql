@@ -9,7 +9,7 @@ CREATE TABLE person (
     person_id INT PRIMARY KEY,
     person_first_name VARCHAR(200) NOT NULL,
     person_last_name VARCHAR(200) NOT NULL,
-    person_email VARCHAR(200) UNIQUE,
+    person_email VARCHAR(200) NOT NULL,
     person_dob DATE NOT NULL,
     person_street VARCHAR(200) NOT NULL,
     person_city VARCHAR(200) NOT NULL,
