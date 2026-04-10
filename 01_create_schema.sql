@@ -102,7 +102,7 @@ CREATE TABLE volunteer (
     volunteer_training_complete BOOLEAN DEFAULT FALSE,
     volunteer_background_check BOOLEAN DEFAULT FALSE,
     volunteer_total_hours INT DEFAULT 0 CHECK (volunteer_total_hours >= 0),
-    volunteer_status VARCHAR(200) CHECK (volunteer_status IN ('TRAINEE', 'CERTIFIED')), -- TRAINEE, CERTIFIED --
+    volunteer_status VARCHAR(200) CHECK (volunteer_status IN ('ACTIVE', 'INACTIVE')), -- TRAINEE, CERTIFIED --
     volunteer_start_date DATE,
 	volunteer_end_date DATE CHECK (volunteer_end_date IS NULL OR volunteer_end_date >= volunteer_start_date), -- NEW ATTRIBUTE --
 	FOREIGN KEY (person_id) REFERENCES person(person_id),
