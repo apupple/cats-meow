@@ -48,7 +48,7 @@ CREATE TABLE rent_info (
 CREATE TABLE animal (
 	animal_id INT PRIMARY KEY,
 	breed_id INT NOT NULL,
-	enclosure_id INT NOT NULL,
+	enclosure_id INT,
 	medical_history_id INT NOT NULL,
 	animal_name VARCHAR(200) NOT NULL,
 	animal_age INT CHECK (animal_age > 0),
