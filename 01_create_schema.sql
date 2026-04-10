@@ -96,7 +96,7 @@ CREATE TABLE employee (
 CREATE TABLE volunteer (
     volunteer_id INT PRIMARY KEY,
     person_id INT UNIQUE NOT NULL,
-    enclosure_id INT NOT NULL,
+    enclosure_id INT,
     volunteer_avaliability_sched TEXT,
     volunteer_training_complete BOOLEAN DEFAULT FALSE,
     volunteer_background_check BOOLEAN DEFAULT FALSE,
@@ -105,7 +105,7 @@ CREATE TABLE volunteer (
     volunteer_start_date DATE,
 	volunteer_end_date DATE, -- CHECK (volunteer_end_date IS NULL OR volunteer_end_date >= volunteer_start_date), -- NEW ATTRIBUTE --
 	FOREIGN KEY (person_id) REFERENCES person(person_id),
-    FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id) -- ON DELETE SET NULL
+    FOREIGN KEY (enclosure_id) REFERENCES enclosure(enclosure_id) ON DELETE SET NULL
 );
 -- 11) CERTIFICATION --
 CREATE TABLE certification (
