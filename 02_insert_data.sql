@@ -15,7 +15,27 @@ INSERT INTO medical_history VALUES
   (1, 'Routine wellness care for young small breed cat'),
   (2, 'General health maintenance for adult domestic shorthair cat'),
   (3, 'Early development monitoring for puppy'),
-  (4, 'Senior health management for large adult dog');
+  (4, 'Senior health management for large adult dog'),
+  (5, 'Post-surgery recovery and monitoring for knee procedure'),
+  (6, 'Chronic skin allergy management and treatment'),
+  (7, 'Obesity management and dietary regulation'),
+  (8, 'Dental care and gum disease prevention'),
+  (9, 'Respiratory infection treatment and follow-up'),
+  (10, 'Vaccination schedule tracking for young animal'),
+  (11, 'Arthritis pain management in senior dog'),
+  (12, 'Digestive issues and food sensitivity monitoring'),
+  (13, 'Ear infection treatment and prevention'),
+  (14, 'Behavioral observation for anxiety-related issues'),
+  (15, 'Fracture recovery and mobility rehabilitation'),
+  (16, 'Heart condition monitoring and medication management'),
+  (17, 'Parasite prevention and routine deworming'),
+  (18, 'Eye infection treatment and vision monitoring'),
+  (19, 'Routine checkups for healthy adult animal'),
+  (20, 'Kidney disease monitoring and fluid therapy'),
+  (21, 'Post-adoption health evaluation and adjustment'),
+  (22, 'Injury care from minor trauma and wounds'),
+  (23, 'Allergy testing and environmental sensitivity tracking'),
+  (24, 'Nutritional deficiency correction and supplement plan');
 -- 3) BREED (breed_id, breed_name, breed_species) --
 INSERT INTO breed VALUES
   (1, 'Burmese', 'Felis Catus'),
