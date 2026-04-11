@@ -52,8 +52,30 @@ INSERT INTO person VALUES
   (47,'Risa','Ward','risa.ward@gmail.com','1995-01-01','67 Scarlet Ln','Hartford','CT','06103'),
   (48,'Levi','Calder','clapperwhodoesntclap@gmail.com','1980-02-18','177 Mystic Ave','New Orleans','LA','70112'),
   (49,'Hayden','Upchurch','radiofreehayden@gmail.com','1989-04-06','12 Quantum Rd','San Francisco','CA','94102'),
-  (50,'Miracolina','Roselli','theogqueen@gmail.com','1990-03-20','13 Quantum Rd','Las Vegas','NV','89104');
--- 2) MEDICAL HISTORY (medical_history_id, needs_desc) --
+  (50,'Miracolina','Roselli','theogqueen@gmail.com','1990-03-20','13 Quantum Rd','Las Vegas','NV','89104'),
+  (51,'Wednesday','Addams','wednesday.addams@gmail.com','2006-10-13','13 Nevermore Lane','Salem','MA','01970'), -- WEDNESDAY --
+  (52,'Morticia','Addams','morticia.addams@gmail.com','1985-03-01','13 Nevermore Lane','Salem','MA','01970'),
+  (53,'Gomez','Addams','gomez.addams@gmail.com','1983-09-25','13 Nevermore Lane','Salem','MA','01970'),
+  (54,'Pugsley','Addams','pugsley.addams@gmail.com','2008-06-10','13 Nevermore Lane','Salem','MA','01970'),
+  (55,'Percy','Jackson','percy.jackson@gmail.com','2004-08-18','600 Olympus Dr','New York','NY','10027'), -- PERCY JACKSON --
+  (56,'Annabeth','Chase','annabeth.chase@gmail.com','2004-07-12','601 Olympus Dr','New York','NY','10027'),
+  (57,'Grover','Underwood','grover.u@gmail.com','2003-04-01','602 Olympus Dr','New York','NY','10027'),
+  (58,'Harry','Potter','harry.potter@gmail.com','2000-07-31','4 Privet Drive','Orlando','FL','32819'), -- HARRY POTTER --
+  (59,'Hermione','Granger','hermione.g@gmail.com','2000-09-19','5 Privet Drive','Orlando','FL','32819'),
+  (60,'Ron','Weasley','ron.weasley@gmail.com','2000-03-01','6 Privet Drive','Orlando','FL','32819'),
+  (61,'Katniss','Everdeen','katniss.e@gmail.com','2002-05-08','12 District Rd','Charlotte','NC','28202'), -- HUNGER GAMES --
+  (62,'Peeta','Mellark','peeta.m@gmail.com','2002-11-20','13 District Rd','Charlotte','NC','28202'),
+  (63,'Gale','Hawthorne','gale.h@gmail.com','2001-01-15','14 District Rd','Charlotte','NC','28202'),
+  (64,'Ross','Geller','indianageller@gmail.com','1990-05-15','1 Swamp Way','Orlando','FL','32830'), -- FRIENDS --
+  (65,'Chandler','Bing','chanandler.bong@gmail.com','1992-08-22','2 Swamp Way','Orlando','FL','32830'),
+  (66,'Joey','Tribbiani',' friendofhugsy@gmail.com','1995-04-04','3 Swamp Way','Orlando','FL','32830'),
+  (67,'Mario','Nintendo','mario.bros@gmail.com','1985-09-13','100 Mushroom Rd','Brooklyn','NY','11211'),-- SUPER MARIO --
+  (68,'Luigi','Nintendo','luigi.bros@gmail.com','1987-07-14','101 Mushroom Rd','Brooklyn','NY','11211'),
+  (69,'Peach','Mario','princess.peach@gmail.com','1990-02-14','102 Castle Rd','Brooklyn','NY','11211'),
+  (70,'Ash','Ketchum','ash.ketchum@gmail.com','2005-05-22','1 Pallet Town Rd','San Jose','CA','95112'), -- POKEMON --
+  (71,'Misty','Waterflower','misty.water@gmail.com','2005-07-10','2 Cerulean Ln','San Jose','CA','95112'),
+  (72,'Brock','Harrison','brock.harrison@gmail.com','2003-01-15','3 Pewter Ave','San Jose','CA','95112');
+  -- 2) MEDICAL HISTORY (medical_history_id, needs_desc) --
 INSERT INTO medical_history VALUES
   (1, 'Routine wellness care for young small breed cat'),
   (2, 'General health maintenance for adult domestic shorthair cat'),
