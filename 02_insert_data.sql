@@ -380,7 +380,6 @@ INSERT INTO vaccinations VALUES
   (27, 24, 'DHPP', '2024-01-25');
 -- 16) MEDICATIONS (medication_id, medical_history_id, medication_name, prescription_date, prescribed_duration) --
 INSERT INTO medications VALUES
-  INSERT INTO medications VALUES
   (1,  1,  'Revolution Plus (flea/tick)', '2024-03-10', 'Ongoing monthly'),
   (2,  2,  'Revolution Plus (flea/tick)', '2023-08-15', 'Ongoing monthly'),
   (3,  3,  'Panacur (dewormer)', '2025-01-02', '3 days'),
