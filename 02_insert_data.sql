@@ -167,8 +167,31 @@ INSERT INTO phone VALUES
   (6, 6, '210-786-2054');
 -- 8) ADOPTER (adopter_id, person_id, rent_info_id, adopter_housing_info, adopter_is_fenced, adopter_hours_outside_of_home) --
 INSERT INTO adopter VALUES
-  (1, 4, 1, '2 story house with mom only', TRUE, '8 hours M-F'),
-  (2, 6, 2, 'apartment with mom and brother', FALSE, '8 hours M-F');
+  INSERT INTO adopter VALUES
+  (1, 2, 1, '2 story house with partner', FALSE, '8 hours M-F'),
+  (2, 3, 2, 'apartment alone', TRUE, '9 hours M-F'),
+  (3, 4, 3, 'condo with roommates', TRUE, '6 hours M-F'),
+  (4, 5, 4, 'single story house with family', FALSE, '8 hours M-F & weekends'),
+  (5, 6, 5, 'townhouse with spouse', TRUE, '10 hours M-F'),
+  (6, 7, 6, 'apartment with parents', TRUE, 'flexible hours'),
+  (7, 10, 7, '2 story house alone', FALSE, '7 hours M-F'),
+  (8, 12, 8, 'studio apartment', TRUE, 'part time 4 hours daily'),
+  (9, 18, 9, 'house with spouse and kids', TRUE, '8 hours M-F'),
+  (10, 23, 10, 'apartment with partner', FALSE, '9 hours M-F'),
+  (11, 27, 11, 'condo alone', TRUE, '6 hours M-F'),
+  (12, 30, 12, 'house with roommates', TRUE, '8 hours M-F & weekends'),
+  (13, 31, 13, '2 story house with family', FALSE, '10 hours M-F'),
+  (14, 34, 14, 'mobile home alone', TRUE, 'flexible hours'),
+  (15, 36, 15, 'townhouse with roommates', TRUE, '7 hours M-F'),
+  (16, 39, 16, 'apartment with siblings', FALSE, 'part time 4 hours daily'),
+  (17, 44, 17, 'house with partner and kids', TRUE, '8 hours M-F'),
+  (18, 45, 18, 'studio with roommate', TRUE, '9 hours M-F'),
+  (19, 47, 19, '2 story house with spouse', FALSE, '6 hours M-F'),
+  (20, 49, 20, 'condo with partner', TRUE, '8 hours M-F & weekends'),
+  (21, 63, 21, 'house alone', TRUE, '10 hours M-F'),
+  (22, 64, 22, 'apartment with kids', FALSE, 'flexible hours'),
+  (23, 67, 23, 'townhouse alone', TRUE, '7 hours M-F'),
+  (24, 68, 24, 'house with grandparents', TRUE, 'part time 4 hours daily');
 -- 9) EMPLOYEE (employee_id, person_id, enclosure_id, employee_work_sched, employee_dept, employee_background_check, employee_job_title, employee_status, employee_hourly_rate, employee_start_date, employee_end_date) --
 INSERT INTO employee VALUES
   (1, 1, 1, 'M-F opening to closing', 'adoption', TRUE, 'MANAGER', 'EMPLOYED', 18.5, '2022-07-23', NULL),
