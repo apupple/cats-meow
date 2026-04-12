@@ -250,7 +250,7 @@ INSERT INTO certification VALUES
   (1, 1, 'Veterinary Technician National Exam (VTNE)', 'American Association of Veterinary State Boards', '2021-03-15'),
   (2, 1, 'Pet CPR and First Aid', 'American Red Cross', '2022-06-10'),
   (3, 2, 'Certified Veterinary Assistant (CVA)', 'National Association of Veterinary Technicians in America', '2020-08-22'),
-  (4, 2, 'Fear Free Veterinary Certification', 'Fear Free LLC', '2023-11-05');
+  (4, 2, 'Fear Free Veterinary Certification', 'Fear Free LLC', '2023-11-05'),
   (5, 3, 'Pet CPR and First Aid', 'American Red Cross', '2021-02-14'),
   (6, 3, 'Fear Free Veterinary Certification', 'Fear Free LLC', '2022-09-10'),
   (7, 4, 'Certified Veterinary Assistant (CVA)', 'NAVTA', '2020-05-01'),
@@ -276,7 +276,7 @@ INSERT INTO preferred_task VALUES
   (1, 1, 'cleaning and playing with animals'),
   (2, 2, 'playing with animals'),
   (3, 2, 'logistical tasks'),
-  (4, 2, 'adoption paperwork');
+  (4, 2, 'adoption paperwork'),
   (5, 3, 'feeding animals'),
   (6, 3, 'cleaning cages'),
   (7, 4, 'walking dogs'),
@@ -300,7 +300,7 @@ INSERT INTO preferred_task VALUES
 -- 13) VET REFERENCES (vet_id, adopter_id, vet_first_name, vet_last_name, vet_phone_number) --
 INSERT INTO vet_references VALUES
   (1, 1, 'James', 'Harrington', '210-555-0174'),
-  (2, 2, 'Sandra', 'Kowalski', '210-555-0392');
+  (2, 2, 'Sandra', 'Kowalski', '210-555-0392'),
   (3, 3, 'Michael', 'Reynolds', '512-555-1122'),
   (4, 4, 'Laura', 'Stevens', '713-555-2233'),
   (5, 5, 'Robert', 'Chen', '972-555-3344'),
@@ -409,7 +409,7 @@ INSERT INTO medications VALUES
 INSERT INTO surgeries VALUES
   (1, 1, 'SPAY', 'Routine ovariohysterectomy performed without complications', '2024-05-12'),
   (2, 2, 'NEUTER', 'Routine orchiectomy performed without complications', '2023-10-03'),
-  (3, 4, 'SPAY', 'Routine ovariohysterectomy performed without complications','2024-08-14');
+  (3, 4, 'SPAY', 'Routine ovariohysterectomy performed without complications','2024-08-14'),
   (4, 5, 'NEUTER', 'Routine orchiectomy performed without complications', '2023-06-10'),
   (5, 6, 'SPAY', 'Routine spay surgery completed successfully', '2023-09-15'),
   (6, 7, 'NEUTER', 'Routine neuter surgery completed successfully', '2024-02-20'),
@@ -435,7 +435,7 @@ INSERT INTO diagnosis VALUES
   (1, 1, 'Ear Mites', '2024-07-22', 'Infestation of Otodectes cynotis detected in both ears treated with topical medication', 'ERADICATED'),
   (2, 2, 'Ear Mites', '2023-11-10', 'Infestation of Otodectes cynotis detected in both ears treated with topical medication', 'ERADICATED'),
   (3, 3, 'Intestinal Parasites', '2025-01-20', 'Roundworm infection detected via fecal float test in routine puppy screening', 'ERADICATED'),
-  (4, 4, 'Kennel Cough', '2024-06-05', 'Mild bordetella infection presenting with persistent cough and nasal discharge treated with antibiotics', 'ERADICATED');
+  (4, 4, 'Kennel Cough', '2024-06-05', 'Mild bordetella infection presenting with persistent cough and nasal discharge treated with antibiotics', 'ERADICATED'),
    (5, 3, 'Flea Allergy Dermatitis', '2023-05-12', 'Severe itching and skin irritation due to flea allergy treated successfully', 'MANAGED'),
   (6, 16, 'Ear Infection', '2023-09-15', 'Bacterial otitis externa treated with antibiotic drops', 'ERADICATED'),
   (7, 7, 'Skin Infection', '2024-02-20', 'Localized dermatitis treated with antibiotics and medicated shampoo', 'ERADICATED'),
