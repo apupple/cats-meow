@@ -75,7 +75,7 @@ INSERT INTO person VALUES
   (70,'Ash','Ketchum','ash.ketchum@gmail.com','2005-05-22','1 Pallet Town Rd','San Jose','CA','95112'), -- POKEMON --
   (71,'Misty','Waterflower','misty.water@gmail.com','2005-07-10','2 Cerulean Ln','San Jose','CA','95112'),
   (72,'Brock','Harrison','brock.harrison@gmail.com','2003-01-15','3 Pewter Ave','San Jose','CA','95112');
-  -- 2) MEDICAL HISTORY (medical_history_id, needs_desc) --
+-- 2) MEDICAL HISTORY (medical_history_id, needs_desc) --
 INSERT INTO medical_history VALUES
   (1, 'Routine wellness care for young small breed cat'),
   (2, 'General health maintenance for adult domestic shorthair cat'),
@@ -155,7 +155,7 @@ INSERT INTO animal VALUES
   (21, 11, 3, 21, 'Zeus',     10, 'M', 'young chocolate short coat energetic'),
   (22, 12, 3, 22, 'Coco',     3,  'F', 'baby sable with black saddle pattern'),
   (23, 13, 4, 23, 'Buster',   30, 'M', 'adult white and brown stocky and calm'),
-  (24, 14, 3, 24, 'Penny',    7,  'F', 'young silver curly coat playful');
+  (24, 14, 3, 24, 'Penny',    7,  'F', 'young silver curly coat playful'),
  
 -- 7) PHONE (phone_id, person_id, phone_number) --
 INSERT INTO phone VALUES
@@ -182,7 +182,7 @@ INSERT INTO certification VALUES
   (1, 1, 'Veterinary Technician National Exam (VTNE)', 'American Association of Veterinary State Boards', '2021-03-15'),
   (2, 1, 'Pet CPR and First Aid', 'American Red Cross', '2022-06-10'),
   (3, 2, 'Certified Veterinary Assistant (CVA)', 'National Association of Veterinary Technicians in America', '2020-08-22'),
-  (4, 2, 'Fear Free Veterinary Certification', 'Fear Free LLC', '2023-11-05'),
+  (4, 2, 'Fear Free Veterinary Certification', 'Fear Free LLC', '2023-11-05');
   (5, 3, 'Pet CPR and First Aid', 'American Red Cross', '2021-02-14'),
   (6, 3, 'Fear Free Veterinary Certification', 'Fear Free LLC', '2022-09-10'),
   (7, 4, 'Certified Veterinary Assistant (CVA)', 'NAVTA', '2020-05-01'),
@@ -208,7 +208,7 @@ INSERT INTO preferred_task VALUES
   (1, 1, 'cleaning and playing with animals'),
   (2, 2, 'playing with animals'),
   (3, 2, 'logistical tasks'),
-  (4, 2, 'adoption paperwork')
+  (4, 2, 'adoption paperwork');
   (5, 3, 'feeding animals'),
   (6, 3, 'cleaning cages'),
   (7, 4, 'walking dogs'),
@@ -232,7 +232,7 @@ INSERT INTO preferred_task VALUES
 -- 13) VET REFERENCES (vet_id, adopter_id, vet_first_name, vet_last_name, vet_phone_number) --
 INSERT INTO vet_references VALUES
   (1, 1, 'James', 'Harrington', '210-555-0174'),
-  (2, 2, 'Sandra', 'Kowalski', '210-555-0392'),
+  (2, 2, 'Sandra', 'Kowalski', '210-555-0392');
   (3, 3, 'Michael', 'Reynolds', '512-555-1122'),
   (4, 4, 'Laura', 'Stevens', '713-555-2233'),
   (5, 5, 'Robert', 'Chen', '972-555-3344'),
@@ -258,7 +258,7 @@ INSERT INTO vet_references VALUES
 -- 14) ADOPTION (adoption_id, animal_id, adopter_id, adoption_status, adoption_start_date, adoption_end_date) --
 INSERT INTO adoption VALUES
   (1, 4, 1, 'COMPLETED', '2025-01-10', '2025-01-24'),
-  (2, 1, 2, 'RETURNED', '2025-03-15', NULL),
+  (2, 1, 2, 'RETURNED', '2025-03-15', NULL);
   (3, 2, 3, 'COMPLETED', '2025-02-01', '2025-02-14'),
   (4, 3, 4, 'PENDING', '2025-02-20', NULL),
   (5, 5, 5, 'APPROVED', '2025-03-01', '2025-03-12'),
@@ -285,63 +285,63 @@ INSERT INTO adoption VALUES
 INSERT INTO vaccinations VALUES
   (1, 1, 'FVRCP', '2023-03-10'),
   (2, 2, 'Rabies', '2024-03-10'),
-  (3, 3, 'FVRCP', '2023-08-15'),
-  (4, 4, 'Rabies', '2023-08-15'),
-  (5, 5, 'DHPP (First Round)', '2023-01-20'),
-  (6, 4, 'DHPP', '2024-06-05'),
-  (7, 6, 'Rabies', '2024-06-05'),
-  (8, 7, 'FVRCP', '2023-05-12'),
-  (9, 8, 'Rabies', '2024-05-12'),
-  (10, 9, 'DHPP', '2023-09-01'),
-  (11, 9, 'Bordetella', '2023-09-01'),
-  (12, 10, 'FVRCP', '2024-02-14'),
-  (13, 11, 'Rabies', '2024-02-14'),
-  (14, 12, 'DHPP', '2024-07-19'),
-  (15, 13, 'Leptospirosis', '2024-07-19'),
-  (16, 14, 'FVRCP', '2023-11-03'),
-  (17, 15, 'Rabies', '2023-11-03'),
-  (18, 16, 'DHPP', '2024-01-25'),
-  (19, 17, 'Bordetella', '2024-01-25'),
-  (20, 18, 'FVRCP', '2023-06-18'),
-  (21, 19, 'Rabies', '2023-10-10'),
-  (22, 20, 'DHPP', '2024-03-03'),
-  (23, 21, 'FVRCP', '2024-08-08'),
-  (24, 22, 'Rabies', '2024-09-09'),
-  (25, 23, 'FVRCP', '2023-11-03'),
-  (26, 24, 'Rabies', '2023-11-03'),
-  (27, 24, 'DHPP', '2024-01-25');
-  
+  (1, 3, 'FVRCP', '2023-08-15'),
+  (2, 4, 'Rabies', '2023-08-15'),
+  (3, 5, 'DHPP (First Round)', '2023-01-20'),
+  (3, 4, 'DHPP', '2024-06-05'),
+  (2, 6, 'Rabies', '2024-06-05'),
+  (1, 7, 'FVRCP', '2023-05-12'),
+  (2, 8, 'Rabies', '2024-05-12'),
+  (3, 9, 'DHPP', '2023-09-01'),
+  (4, 9, 'Bordetella', '2023-09-01'),
+  (1, 10, 'FVRCP', '2024-02-14'),
+  (2, 11, 'Rabies', '2024-02-14'),
+  (3, 12, 'DHPP', '2024-07-19'),
+  (5, 13, 'Leptospirosis', '2024-07-19'),
+  (1, 14, 'FVRCP', '2023-11-03'),
+  (2, 15, 'Rabies', '2023-11-03'),
+  (3, 16, 'DHPP', '2024-01-25'),
+  (4, 17, 'Bordetella', '2024-01-25'),
+  (1, 18, 'FVRCP', '2023-06-18'),
+  (2, 19, 'Rabies', '2023-10-10'),
+  (3, 20, 'DHPP', '2024-03-03'),
+  (1, 21, 'FVRCP', '2024-08-08'),
+  (2, 22, 'Rabies', '2024-09-09'),
+  (1, 23, 'FVRCP', '2023-11-03'),
+  (2, 24, 'Rabies', '2023-11-03'),
+  (3, 24, 'DHPP', '2024-01-25'),
+  (4, 25, 'Bordetella', '2024-01-25');
 -- 16) MEDICATIONS (medication_id, medical_history_id, medication_name, prescription_date, prescribed_duration) --
 INSERT INTO medications VALUES
   (1, 1, 'Revolution Plus (flea/tick)', '2024-03-10', 'Ongoing monthly'),
-  (2, 2, 'Revolution Plus (flea/tick)', '2023-08-15', 'Ongoing monthly'),
-  (3, 4, 'Panacur (dewormer)', '2025-01-02', '3 days'),
-  (4, 5, 'Simparica Trio', '2024-06-05', 'Ongoing monthly'),
-  (5, 7, 'Capstar', '2023-05-12', 'Single dose'),
-  (6, 23, 'Metronidazole', '2023-09-01', '7 days'),
-  (7, 16, 'Doxycycline', '2024-02-14', '10 days'),
-  (8, 5, 'Ivermectin', '2024-07-19', '5 days'),
-  (9, 9, 'Amoxicillin', '2023-11-03', '10 days'),
-  (10, 10, 'Prednisone', '2024-01-25', '5 days'),
-  (11, 13, 'Revolution Plus (flea/tick)', '2023-06-18', 'Ongoing monthly'),
-  (12, 12, 'Simparica Trio', '2023-10-10', 'Ongoing monthly'),
-  (13, 11, 'Panacur (dewormer)', '2024-03-03', '3 days'),
-  (14, 14, 'Doxycycline', '2024-08-08', '10 days'),
-  (15, 15, 'Metronidazole', '2024-09-09', '7 days'),
-  (16, 17, 'Amoxicillin', '2023-12-12', '10 days'),
-  (17, 17, 'Capstar', '2024-02-02', 'Single dose'),
-  (18, 18, 'Ivermectin', '2024-04-04', '5 days'),
-  (19, 19, 'Prednisone', '2024-06-06', '5 days'),
-  (20, 20, 'Revolution Plus (flea/tick)', '2024-07-07', 'Ongoing monthly'),
-  (21, 21, 'Simparica Trio', '2024-08-08', 'Ongoing monthly'),
-  (22, 22, 'Panacur (dewormer)', '2024-09-09', '3 days'),
-  (23, 23, 'Metronidazole', '2024-10-10', '7 days'),
-  (24, 24, 'Doxycycline', '2024-11-11', '10 days');
+  (1, 2, 'Revolution Plus (flea/tick)', '2023-08-15', 'Ongoing monthly'),
+  (2, 3, 'Panacur (dewormer)', '2025-01-02', '3 days'),
+  (3, 4, 'Simparica Trio', '2024-06-05', 'Ongoing monthly'),
+  (4, 5, 'Capstar', '2023-05-12', 'Single dose'),
+  (5, 6, 'Metronidazole', '2023-09-01', '7 days'),
+  (6, 7, 'Doxycycline', '2024-02-14', '10 days'),
+  (7, 8, 'Ivermectin', '2024-07-19', '5 days'),
+  (8, 9, 'Amoxicillin', '2023-11-03', '10 days'),
+  (9, 10, 'Prednisone', '2024-01-25', '5 days'),
+  (1, 11, 'Revolution Plus (flea/tick)', '2023-06-18', 'Ongoing monthly'),
+  (3, 12, 'Simparica Trio', '2023-10-10', 'Ongoing monthly'),
+  (2, 13, 'Panacur (dewormer)', '2024-03-03', '3 days'),
+  (6, 14, 'Doxycycline', '2024-08-08', '10 days'),
+  (5, 15, 'Metronidazole', '2024-09-09', '7 days'),
+  (8, 16, 'Amoxicillin', '2023-12-12', '10 days'),
+  (4, 17, 'Capstar', '2024-02-02', 'Single dose'),
+  (7, 18, 'Ivermectin', '2024-04-04', '5 days'),
+  (9, 19, 'Prednisone', '2024-06-06', '5 days'),
+  (1, 20, 'Revolution Plus (flea/tick)', '2024-07-07', 'Ongoing monthly'),
+  (3, 21, 'Simparica Trio', '2024-08-08', 'Ongoing monthly'),
+  (2, 22, 'Panacur (dewormer)', '2024-09-09', '3 days'),
+  (5, 23, 'Metronidazole', '2024-10-10', '7 days'),
+  (6, 24, 'Doxycycline', '2024-11-11', '10 days');
 -- 17) SURGERIES (surgery_id, medical_history_id, surgery_name, surgery_desc, surgery_date) --
 INSERT INTO surgeries VALUES
   (1, 1, 'SPAY', 'Routine ovariohysterectomy performed without complications', '2024-05-12'),
   (2, 2, 'NEUTER', 'Routine orchiectomy performed without complications', '2023-10-03'),
-  (3, 4, 'SPAY', 'Routine ovariohysterectomy performed without complications','2024-08-14'),
+  (3, 4, 'SPAY', 'Routine ovariohysterectomy performed without complications','2024-08-14');
   (4, 5, 'NEUTER', 'Routine orchiectomy performed without complications', '2023-06-10'),
   (5, 6, 'SPAY', 'Routine spay surgery completed successfully', '2023-09-15'),
   (6, 7, 'NEUTER', 'Routine neuter surgery completed successfully', '2024-02-20'),
@@ -362,14 +362,13 @@ INSERT INTO surgeries VALUES
   (21, 22, 'SPAY', 'Routine spay surgery completed successfully', '2024-09-10'),
   (22, 23, 'NEUTER', 'Routine neuter surgery completed successfully', '2024-10-12'),
   (23, 24, 'SPAY', 'Routine spay surgery completed successfully', '2024-11-15');
-  
 -- 18) DIAGNOSIS (diagnosis_id, medical_history_id, diagnosis_name, diagnosis_date, diagnosis_desc, diagnosis_status) --
 INSERT INTO diagnosis VALUES
   (1, 1, 'Ear Mites', '2024-07-22', 'Infestation of Otodectes cynotis detected in both ears treated with topical medication', 'ERADICATED'),
   (2, 2, 'Ear Mites', '2023-11-10', 'Infestation of Otodectes cynotis detected in both ears treated with topical medication', 'ERADICATED'),
   (3, 3, 'Intestinal Parasites', '2025-01-20', 'Roundworm infection detected via fecal float test in routine puppy screening', 'ERADICATED'),
-  (4, 4, 'Kennel Cough', '2024-06-05', 'Mild bordetella infection presenting with persistent cough and nasal discharge treated with antibiotics', 'ERADICATED'),
-  (5, 3, 'Flea Allergy Dermatitis', '2023-05-12', 'Severe itching and skin irritation due to flea allergy treated successfully', 'MANAGED'),
+  (4, 4, 'Kennel Cough', '2024-06-05', 'Mild bordetella infection presenting with persistent cough and nasal discharge treated with antibiotics', 'ERADICATED');
+   (5, 3, 'Flea Allergy Dermatitis', '2023-05-12', 'Severe itching and skin irritation due to flea allergy treated successfully', 'MANAGED'),
   (6, 16, 'Ear Infection', '2023-09-15', 'Bacterial otitis externa treated with antibiotic drops', 'ERADICATED'),
   (7, 7, 'Skin Infection', '2024-02-20', 'Localized dermatitis treated with antibiotics and medicated shampoo', 'ERADICATED'),
   (8, 3, 'Worm Infestation', '2024-07-01', 'Hookworms detected and treated with dewormer', 'ERADICATED'),
