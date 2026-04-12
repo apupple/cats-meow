@@ -177,7 +177,7 @@ INSERT INTO animal VALUES
   (21, 11, 3, 21, 'Zeus',     10, 'M', 'young chocolate short coat energetic'),
   (22, 12, 3, 22, 'Coco',     3,  'F', 'baby sable with black saddle pattern'),
   (23, 13, 4, 23, 'Buster',   30, 'M', 'adult white and brown stocky and calm'),
-  (24, 14, 3, 24, 'Penny',    7,  'F', 'young silver curly coat playful'),
+  (24, 14, 3, 24, 'Penny',    7,  'F', 'young silver curly coat playful');
  
 -- 7) PHONE (phone_id, person_id, phone_number) --
 INSERT INTO phone VALUES
