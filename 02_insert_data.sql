@@ -326,7 +326,7 @@ INSERT INTO vet_references VALUES
 -- 14) ADOPTION (adoption_id, animal_id, adopter_id, adoption_status, adoption_start_date, adoption_end_date) --
 INSERT INTO adoption VALUES
   (1, 4, 1, 'COMPLETED', '2025-01-10', '2025-01-24'),
-  (2, 1, 2, 'RETURNED', '2025-03-15', NULL);
+  (2, 1, 2, 'RETURNED', '2025-03-15', NULL),
   (3, 2, 3, 'COMPLETED', '2025-02-01', '2025-02-14'),
   (4, 3, 4, 'PENDING', '2025-02-20', NULL),
   (5, 5, 5, 'APPROVED', '2025-03-01', '2025-03-12'),
