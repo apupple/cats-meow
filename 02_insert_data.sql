@@ -161,30 +161,18 @@ INSERT INTO breed VALUES
 -- 4) ENCLOSURE (enclosure_id, enclosure_sanitation_status, enclosure_max_capacity) --
 --  1-3 = cats, 4-6 = dogs, 7-9 = bunnies, 10-12 = birds --
 INSERT INTO enclosure VALUES
-  (1, 'Clean', 10),
-  (2, 'Dirty', 10),
-  (3, 'Dirty', 10),
-  (4, 'Clean', 10),
-  (5, 'Dirty', 10),
-  (6, 'Dirty', 10),
-  (7, 'Clean', 12),
-  (8, 'Dirty', 12),
-  (9, 'Dirty', 6),
-  (10, 'Clean', 6),
-  (11, 'Clean', 5),
-  (12, 'Clean', 5),
-  (13, 'Dirty', 5),
-  (14, 'Clean', 5),
-  (15, 'Clean', 8),
-  (16, 'Dirty', 8),
-  (17, 'Clean', 12),
-  (18, 'Clean', 12),
-  (19, 'Dirty', 10),
-  (20, 'Dirty', 10),
-  (21, 'Dirty', 12),
-  (22, 'Clean', 12),
-  (23, 'Dirty', 12),
-  (24, 'Dirty', 12);
+  (1,  'Clean', 12),
+  (2,  'Clean', 12),
+  (3,  'Dirty', 12),
+  (4,  'Clean', 15),
+  (5,  'Dirty', 15),
+  (6,  'Clean', 15),
+  (7,  'Clean', 10),
+  (8,  'Clean', 10),
+  (9,  'Dirty', 10),
+  (10, 'Clean',  8),
+  (11, 'Dirty',  8),
+  (12, 'Clean',  8);
 -- 5) RENT INFO (rent_info_id, is_rented, charge_of_rent, landlord_phone_number, landlord_first_name, landlord_last_name) --
 INSERT INTO rent_info VALUES
   (1, FALSE, NULL, NULL, NULL, NULL),
