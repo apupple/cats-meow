@@ -352,7 +352,7 @@ INSERT INTO adopter VALUES
   (21, 63, 21, 'house alone', TRUE, '10 hours M-F'),
   (22, 64, 22, 'apartment with kids', FALSE, 'flexible hours'),
   (23, 67, 23, 'townhouse alone', TRUE, '7 hours M-F'),
-  (24, 68, 24, 'house with grandparents', TRUE, 'part time 4 hours daily');
+  (24, 68, 24, 'house with grandparents', TRUE, 'part time 4 hours daily'),
   (25, 74, 25, 'house with partner', TRUE, '8 hours M-F');
 
 -- 9) EMPLOYEE (employee_id, person_id, enclosure_id, employee_work_sched, employee_dept, employee_background_check, employee_job_title, employee_status, employee_hourly_rate, employee_start_date, employee_end_date) --
