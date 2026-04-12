@@ -377,7 +377,7 @@ INSERT INTO vaccinations VALUES
   (24, 22, 'Rabies', '2024-09-09'),
   (25, 23, 'FVRCP', '2023-11-03'),
   (26, 24, 'Rabies', '2023-11-03'),
-  (27, 24, 'DHPP', '2024-01-25'),
+  (27, 24, 'DHPP', '2024-01-25');
 -- 16) MEDICATIONS (medication_id, medical_history_id, medication_name, prescription_date, prescribed_duration) --
 INSERT INTO medications VALUES
   (1, 1, 'Revolution Plus (flea/tick)', '2024-03-10', 'Ongoing monthly'),
