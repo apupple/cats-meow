@@ -128,8 +128,30 @@ INSERT INTO enclosure VALUES
   (4, 'Clean', 10);
 -- 5) RENT INFO (rent_info_id, is_rented, charge_of_rent, landlord_phone_number, landlord_first_name, landlord_last_name) --
 INSERT INTO rent_info VALUES
-  (1, False, NULL, NULL, NULL, NULL),
-  (2, True, 1200.00, '210-896-2488', 'Bob', 'Ross');
+  (1, FALSE, NULL, NULL, NULL, NULL),
+  (2, TRUE, 1200.00, '210-896-2488', 'Bob', 'Ross'),
+  (3, TRUE, 950.00, '210-555-1234', 'Linda', 'Carter'),
+  (4, FALSE, NULL, NULL, NULL, NULL),
+  (5, FALSE, NULL, NULL, NULL, NULL),
+  (6, TRUE, 1100.00, '512-555-2345', 'James', 'Murphy'),
+  (7, FALSE, NULL, NULL, NULL, NULL),
+  (8, TRUE, 1350.00, '713-555-3456', 'Patricia', 'Wong'),
+  (9, FALSE, NULL, NULL, NULL, NULL),
+  (10, TRUE, 875.00, '214-555-4567', 'Kevin', 'Nguyen'),
+  (11, TRUE, 1450.00, '817-555-5678', 'Sandra', 'Mills'),
+  (12, FALSE, NULL, NULL, NULL, NULL),
+  (13, FALSE, NULL, NULL, NULL, NULL),
+  (14, TRUE, 1050.00, '281-555-6789', 'David', 'Ortiz'),
+  (15, FALSE, NULL, NULL, NULL, NULL),
+  (16, TRUE, 800.00, '972-555-7890', 'Angela', 'Brooks'),
+  (17, FALSE, NULL, NULL, NULL, NULL),
+  (18, TRUE, 1250.00, '830-555-8901', 'Thomas', 'Reid'),
+  (19, FALSE, NULL, NULL, NULL, NULL),
+  (20, TRUE, 1200.00, '210-896-2488', 'Bob', 'Ross'),
+  (21, FALSE, NULL, NULL, NULL, NULL),
+  (22, TRUE, 950.00, '210-555-1234', 'Linda', 'Carter'),
+  (23, FALSE, NULL, NULL, NULL, NULL),
+  (24, FALSE, NULL, NULL, NULL, NULL);
 -- 6) ANIMAL (animal_id, breed_id, enclosure_id, medical_history_id, animal_name, animal_age, animal_sex, animal_desc) --
 INSERT INTO animal VALUES
   (1,  1,  1, 1,  'Bella',    2,  'F', 'small brown fluffy baby'),
@@ -167,7 +189,6 @@ INSERT INTO phone VALUES
   (6, 6, '210-786-2054');
 -- 8) ADOPTER (adopter_id, person_id, rent_info_id, adopter_housing_info, adopter_is_fenced, adopter_hours_outside_of_home) --
 INSERT INTO adopter VALUES
-  INSERT INTO adopter VALUES
   (1, 2, 1, '2 story house with partner', FALSE, '8 hours M-F'),
   (2, 3, 2, 'apartment alone', TRUE, '9 hours M-F'),
   (3, 4, 3, 'condo with roommates', TRUE, '6 hours M-F'),
@@ -194,12 +215,36 @@ INSERT INTO adopter VALUES
   (24, 68, 24, 'house with grandparents', TRUE, 'part time 4 hours daily');
 -- 9) EMPLOYEE (employee_id, person_id, enclosure_id, employee_work_sched, employee_dept, employee_background_check, employee_job_title, employee_status, employee_hourly_rate, employee_start_date, employee_end_date) --
 INSERT INTO employee VALUES
-  (1, 1, 1, 'M-F opening to closing', 'adoption', TRUE, 'MANAGER', 'EMPLOYED', 18.5, '2022-07-23', NULL),
-  (2, 2, 2, 'M-F opening to closing & weekends as needed', 'animal care', TRUE,'MANAGER', 'EMPLOYED', 18.5, '2022-07-23', NULL);
+  (1, 8, 1, 'M-F opening to closing', 'adoption', TRUE, 'STAFF', 'EMPLOYED', 18.5, '2022-07-23', NULL),
+  (2, 9, 2, 'M-F 9 AM to 5 PM', 'animal care', TRUE, 'SENIOR STAFF', 'EMPLOYED', 17.0, '2022-09-01', NULL),
+  (3, 20, 3, 'TTh weekends', 'administration', TRUE, 'COORDINATOR', 'EMPLOYED', 16.5, '2023-01-15', NULL),
+  (4, 21, 4, 'MWF 8 AM to 4 PM', 'veterinary', TRUE, 'MANAGER', 'EMPLOYED', 19.0, '2023-03-20', NULL),
+  (5, 24, 1, 'M-F opening to closing & weekends as needed', 'adoption', TRUE, 'TECHNICIAN', 'EMPLOYED', 15.5, '2021-11-10', NULL),
+  (6, 28, 2, 'Tu-Sa 10 AM to 6 PM', 'animal care', TRUE, 'ASSISTANT', 'EMPLOYED', 18.0, '2022-04-05', NULL),
+  (7, 33, 3, 'Su-Th 8 AM to 4 PM', 'administration', TRUE, 'STAFF', 'EMPLOYED', 17.5, '2023-06-01', NULL),
+  (8, 48, 4, 'M-F 12 PM to 8 PM', 'veterinary', TRUE, 'SENIOR STAFF', 'EMPLOYED', 16.0, '2021-08-15', NULL),
+  (9, 51, 1, 'MWF opening to closing', 'adoption', TRUE, 'COORDINATOR', 'EMPLOYED', 20.0, '2022-12-01', NULL),
+  (10, 54, 2, 'TTh 7 AM to 3 PM', 'animal care', TRUE, 'MANAGER', 'EMPLOYED', 15.0, '2023-07-10', NULL),
+  (11, 55, 3, 'M-F 8 AM to 4 PM', 'administration', TRUE, 'TECHNICIAN', 'EMPLOYED', 18.5, '2022-02-14', NULL),
+  (12, 58, 4, 'weekends only 8 AM to 6 PM', 'veterinary', TRUE, 'ASSISTANT', 'EMPLOYED', 17.0, '2021-05-20', NULL),
+  (13, 66, 1, 'M-F 10 AM to 6 PM', 'adoption', TRUE, 'STAFF', 'EMPLOYED', 16.5, '2023-09-01', NULL),
+  (14, 71, 2, 'TTh & Sa 9 AM to 5 PM', 'animal care', TRUE, 'SENIOR STAFF', 'EMPLOYED', 19.5, '2022-11-30', NULL);
 -- 10) VOLUNTEER (volunteer_id, person_id, enclosure_id, volunteer_availability_sched, volunteer_training_complete, volunteer_background_check, volunteer_total_hours, volunteer_status, volunteer_start_date, volunteer_end_date) --
 INSERT INTO volunteer VALUES
-  (1, 3, 1, 'MWF 1 PM to 6 PM', TRUE, TRUE, 10,  'ACTIVE', '2025-12-03', NULL),
-  (2, 5, 2, 'TTh 9 AM to 5 PM', FALSE, TRUE, 0, 'INACTIVE', NULL, NULL);
+  (1, 19, 1, 'MWF 1 PM to 6 PM', TRUE, TRUE, 10, 'ACTIVE', '2025-12-03', NULL),
+  (2, 25, 2, 'TTh 9 AM to 5 PM', FALSE, TRUE, 0, 'INACTIVE', '2025-11-01', NULL),
+  (3, 29, 3, 'Sa 10 AM to 4 PM', TRUE, TRUE, 5, 'ACTIVE', '2025-10-15', NULL),
+  (4, 37, 4, 'Su 12 PM to 6 PM', TRUE, TRUE, 20, 'ACTIVE', '2025-09-20', NULL),
+  (5, 41, 1, 'MWF 9 AM to 1 PM', TRUE, TRUE, 8, 'ACTIVE', '2025-08-10', NULL),
+  (6, 43, 2, 'TTh 1 PM to 5 PM', FALSE, TRUE, 0, 'INACTIVE', NULL, NULL),
+  (7, 46, 3, 'Sa-Su 9 AM to 3 PM', TRUE, TRUE, 15, 'ACTIVE', '2025-07-05', NULL),
+  (8, 50, 4, 'M 10 AM to 4 PM', TRUE, TRUE, 3, 'ACTIVE', '2025-06-01', NULL),
+  (9, 52, 1, 'WF 1 PM to 6 PM', TRUE, TRUE, 12, 'ACTIVE', '2025-05-14', NULL),
+  (10, 53, 2, 'TTh 10 AM to 2 PM', FALSE, TRUE, 0, 'INACTIVE', '2025-04-20', NULL),
+  (11, 57, 3, 'MWF 2 PM to 6 PM', TRUE, TRUE, 6, 'ACTIVE', '2025-03-10', NULL),
+  (12, 61, 4, 'Sa 8 AM to 2 PM', TRUE, TRUE, 18, 'ACTIVE', '2025-02-28', NULL),
+  (13, 69, 1, 'Su-M 10 AM to 4 PM', TRUE, TRUE, 9, 'ACTIVE', '2025-01-15', NULL),
+  (14, 70, 2, 'TTh 8 AM to 12 PM', FALSE, TRUE, 0, 'INACTIVE', NULL, NULL);
 -- 11) CERTIFICATION (certification_id, employee_id, certification_name, issuer_name, issued_date) --
 INSERT INTO certification VALUES
   (1, 1, 'Veterinary Technician National Exam (VTNE)', 'American Association of Veterinary State Boards', '2021-03-15'),
