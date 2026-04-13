@@ -11,10 +11,7 @@ FROM PAWS.person p
 LEFT JOIN PAWS.phone n ON p.person_ID = n.person_ID
 GROUP BY p.person_ID;
 
--- 2) Min/Max --
-
-
--- 3) Adopter Information --
+-- 2) Adopter Information --
 SELECT
     f_get_full_name(p.person_first_name, p.person_last_name) AS full_name,
     p.person_email,
@@ -30,7 +27,7 @@ JOIN phone ph ON p.person_id = ph.person_id
 LEFT JOIN rent_info ri ON a.rent_info_id = ri.rent_info_id
 ORDER BY p.person_last_name, p.person_first_name;
 
--- What species and breeds are currently in the shelter?
+-- 3) What species and breeds are currently in the shelter?
 SELECT DISTINCT
     b.breed_species,
     b.breed_name,
@@ -40,7 +37,7 @@ JOIN animal a ON b.breed_id = a.breed_id
 GROUP BY b.breed_species, b.breed_name
 ORDER BY b.breed_species, animals_in_shelter DESC;
 
--- How full is each enclosure?
+-- 4) How full is each enclosure?
 SELECT
     enclosure_id,
     enclosure_sanitation_status,
@@ -51,7 +48,7 @@ SELECT
 FROM enclosure
 ORDER BY pct_full DESC;
 
--- Employee Payroll
+-- 5) Employee Payroll
 SELECT
     e.employee_dept,
     COUNT(e.employee_id) AS staff_count,
@@ -72,7 +69,7 @@ WHERE e.employee_status = 'EMPLOYED'
 GROUP BY e.employee_dept, p.person_first_name, p.person_last_name, e.employee_job_title
 ORDER BY avg_rate DESC;
 
--- Volunteer Hours Leaderbaord
+-- 6) Volunteer Hours Leaderbaord
 SELECT
     f_get_full_name(p.person_first_name, p.person_last_name) AS volunteer_name,
     v.volunteer_total_hours,
