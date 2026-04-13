@@ -94,3 +94,23 @@ BEGIN
 END//
 DELIMITER ;
 
+-- 3) Delete enclosure check: check if animals are in enclosure before deletion
+DELIMITER //
+CREATE TRIGGER trg_delete_enclosure_check
+BEFORE DELETE ON enclosure
+FOR EACH ROW
+BEGIN
+    DECLARE animal_count INT;
+
+    SELECT COUNT(*)
+    INTO animal_count
+    FROM animal
+    WHERE enclosure_id = OLD.enclosure_id;
+
+    IF animal_count > 0 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Cannot delete enclosure: animals are still assigned to it.';
+    END IF;
+END//
+DELIMITER ;
+
