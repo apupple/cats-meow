@@ -515,27 +515,28 @@ INSERT INTO adoption VALUES
   (1, 4, 1, 'COMPLETED', '2025-01-10', '2025-01-24'),
   (2, 1, 2, 'RETURNED', '2025-03-15', NULL),
   (3, 2, 3, 'COMPLETED', '2025-02-01', '2025-02-14'),
-  (4, 3, 4, 'PENDING', '2025-02-20', NULL),
   (5, 5, 5, 'APPROVED', '2025-03-01', '2025-03-12'),
   (6, 6, 6, 'RETURNED', '2025-03-10', NULL),
   (7, 7, 7, 'COMPLETED', '2025-03-15', '2025-03-28'),
-  (8, 8, 8, 'PENDING', '2025-04-01', NULL),
   (9, 9, 9, 'COMPLETED', '2025-04-05', '2025-04-18'),
   (10, 10, 10, 'COMPLETED', '2025-04-10', '2025-04-22'),
   (11, 11, 11, 'RETURNED', '2025-04-15', NULL),
   (12, 12, 12, 'APPROVED', '2025-04-20', '2025-05-02'),
-  (13, 13, 13, 'PENDING', '2025-05-01', NULL),
   (14, 14, 14, 'COMPLETED', '2025-05-05', '2025-05-18'),
   (15, 15, 15, 'COMPLETED', '2025-05-10', '2025-05-22'),
   (16, 40, 16, 'RETURNED', '2025-05-15', NULL),
   (17, 17, 17, 'COMPLETED', '2025-05-20', '2025-06-02'),
-  (18, 18, 18, 'PENDING', '2025-06-01', NULL),
   (19, 44, 19, 'COMPLETED', '2025-06-05', '2025-06-18'),
   (20, 36, 20, 'APPROVED', '2025-06-10', '2025-06-22'),
   (21, 21, 21, 'RETURNED', '2025-06-15', NULL),
   (22, 30, 22, 'COMPLETED', '2025-06-20', '2025-07-02'),
-  (23, 23, 23, 'PENDING', '2025-07-01', NULL),
   (24, 24, 24, 'COMPLETED', '2025-07-05', '2025-07-18');
+
+CALL create_adoption(4, 3, 4, '2025-02-20');
+CALL create_adoption(8, 8, 8, '2025-04-01');
+CALL create_adoption(13, 13, 13, '2025-05-01');
+CALL create_adoption(18, 18, 18, '2025-06-01');
+CALL create_adoption(23, 23, 23, '2025-07-01');
 -- 15) VACCINATIONS (vaccination_id, medical_history_id, vaccination_name, vaccination_date) --
 INSERT INTO vaccinations VALUES
   (1,  1,  'FVRCP', '2023-03-10'),
