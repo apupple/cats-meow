@@ -42,6 +42,8 @@ END //
 DELIMITER ;
 
 -- PROCEDURES --
+
+-- 1) Create adoption: Add a new pending adoption to the database
 DELIMITER //
 CREATE PROCEDURE create_adoption (IN p_adoption_id INT, IN p_animal_id INT, IN p_adopter_id INT, IN p_start_date DATE)
 BEGIN
@@ -53,6 +55,7 @@ DELIMITER ;
 -- TRIGGERS --
 
 -- 1) Insert animal check: check occupancy before inserting an animal
+-- If the enclosure is full, the animal will not be added and there'll be an error
 DELIMITER //
 CREATE TRIGGER trg_insert_animal_check
 BEFORE INSERT ON animal
@@ -73,6 +76,7 @@ END //
 DELIMITER ;
 
 -- 2) Update animal check: check occupancy before updating an animal
+-- If the enclosure is full, the animal will not be updated and there'll be an error
 DELIMITER //
 CREATE TRIGGER trg_update_animal_check
 BEFORE UPDATE ON animal
@@ -95,6 +99,7 @@ END//
 DELIMITER ;
 
 -- 3) Delete enclosure check: check if animals are in enclosure before deletion
+-- If there are animals, the enclosure will not be deleted and there'll be an error
 DELIMITER //
 CREATE TRIGGER trg_delete_enclosure_check
 BEFORE DELETE ON enclosure
