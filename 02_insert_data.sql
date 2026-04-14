@@ -533,11 +533,11 @@ INSERT INTO adoption VALUES
   (24, 24, 24, 'COMPLETED', '2025-07-05', '2025-07-18'),
   (25, 39, 25, 'APPROVED', '2025-07-20', NULL);
 
-CALL create_adoption(4, 3, 4, '2025-02-20');
-CALL create_adoption(8, 8, 8, '2025-04-01');
-CALL create_adoption(13, 13, 13, '2025-05-01');
-CALL create_adoption(18, 18, 18, '2025-06-01');
-CALL create_adoption(23, 23, 23, '2025-07-01');
+CALL create_adoption(4, 3, 4);
+CALL create_adoption(8, 8, 8);
+CALL create_adoption(13, 13, 13);
+CALL create_adoption(18, 18, 18);
+CALL create_adoption(23, 23, 23);
 -- 15) VACCINATIONS (vaccination_id, medical_history_id, vaccination_name, vaccination_date) --
 INSERT INTO vaccinations VALUES
   (1,  1,  'FVRCP', '2023-03-10'),

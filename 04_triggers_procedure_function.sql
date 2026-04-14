@@ -45,10 +45,10 @@ DELIMITER ;
 
 -- 1) Create adoption: Add a new pending adoption to the database
 DELIMITER //
-CREATE PROCEDURE create_adoption (IN p_adoption_id INT, IN p_animal_id INT, IN p_adopter_id INT, IN p_start_date DATE)
+CREATE PROCEDURE create_adoption (IN p_adoption_id INT, IN p_animal_id INT, IN p_adopter_id INT)
 BEGIN
     INSERT INTO adoption (adoption_id, animal_id, adopter_id, adoption_status, adoption_start_date, adoption_end_date)
-    VALUES (p_adoption_id, p_animal_id, p_adopter_id, 'PENDING', p_start_date, NULL);
+    VALUES (p_adoption_id, p_animal_id, p_adopter_id, 'PENDING', NULL, NULL);
 END //
 DELIMITER ;
 
