@@ -79,6 +79,30 @@ GROUP BY e.employee_dept, p.person_first_name, p.person_last_name, e.employee_jo
 ORDER BY avg_rate DESC;
 -- ORDER OUTPUT: employee_dept, staff_count, lowest_rate, highest_rate, avg_rate, top_earner, top_earner_title
 -- EX OUTPUT: 'adoption', '1', '20.00', '20.00', '20.00', 'Wednesday Addams', 'COORDINATOR'
+WITH dept_stats AS (
+	SELECT
+		employee_dept,
+		COUNT(employee_id) AS staff_count,
+		MIN(employee_hourly_rate) AS lowest_rate,
+		MAX(employee_hourly_rate) AS highest_rate,
+		ROUND(AVG(employee_hourly_rate), 2) AS avg_rate
+	FROM employee
+	WHERE employee_status = 'EMPLOYED'
+	GROUP BY employee_dept
+)
+SELECT
+	dept_stats.employee_dept,
+    dept_stats.staff_count,
+    dept_stats.lowest_rate,
+    dept_stats.highest_rate,
+    dept_stats.avg_rate,
+    f_get_full_name(person.person_first_name, person.person_last_name) AS top_earner,
+    employee.employee_job_title AS top_earner_title
+FROM dept_stats
+JOIN employee ON employee.employee_dept = dept_stats.employee_dept AND employee.employee_hourly_rate = dept_stats.highest_rate
+JOIN person ON employee.person_id = person.person_id
+WHERE employee.employee_status = 'EMPLOYED'
+ORDER BY dept_stats.highest_rate DESC;
 
 -- 6) Volunteer Hours Leaderboard
 SELECT
