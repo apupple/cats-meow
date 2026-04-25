@@ -161,7 +161,7 @@ INSERT INTO breed VALUES
 -- 4) ENCLOSURE (enclosure_id, enclosure_sanitation_status, enclosure_max_capacity) --
 --  1-3 = cats, 4-6 = dogs, 7-9 = bunnies, 10-12 = birds --
 INSERT INTO enclosure VALUES
-  (1,  'Clean', 12),
+  (1,  'Clean', 8),
   (2,  'Clean', 12),
   (3,  'Dirty', 12),
   (4,  'Clean', 15),
