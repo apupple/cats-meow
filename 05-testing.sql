@@ -1,0 +1,1 @@
+INSERT INTO animal VALUES (49, 1, 1, 49, 'Test Dog', 2,  'F', 'this dog is for testing!')
