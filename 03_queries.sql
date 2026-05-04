@@ -58,27 +58,6 @@ ORDER BY pct_full DESC;
 
 
 -- 5) Employee Payroll
-SELECT
-    e.employee_dept,
-    COUNT(e.employee_id) AS staff_count,
-    MIN(e.employee_hourly_rate) AS lowest_rate,
-    MAX(e.employee_hourly_rate) AS highest_rate,
-    ROUND(AVG(e.employee_hourly_rate), 2) AS avg_rate,
-    f_get_full_name(p.person_first_name, p.person_last_name) AS top_earner,
-    e.employee_job_title AS top_earner_title
-FROM employee e
-JOIN person p ON e.person_id = p.person_id
-WHERE e.employee_status = 'EMPLOYED'
-  AND e.employee_hourly_rate = (
-      SELECT MAX(e2.employee_hourly_rate)
-      FROM employee e2
-      WHERE e2.employee_dept = e.employee_dept
-        AND e2.employee_status = 'EMPLOYED'
-  )
-GROUP BY e.employee_dept, p.person_first_name, p.person_last_name, e.employee_job_title
-ORDER BY avg_rate DESC;
--- ORDER OUTPUT: employee_dept, staff_count, lowest_rate, highest_rate, avg_rate, top_earner, top_earner_title
--- EX OUTPUT: 'adoption', '1', '20.00', '20.00', '20.00', 'Wednesday Addams', 'COORDINATOR'
 WITH dept_stats AS (
 	SELECT
 		employee_dept,
