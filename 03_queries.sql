@@ -45,16 +45,19 @@ ORDER BY b.breed_species, animals_in_shelter DESC;
 
 -- 4) How full is each enclosure?
 SELECT
-    enclosure_id,
-    enclosure_sanitation_status,
-    enclosure_max_capacity,
-    f_calculate_current_occupancy(enclosure_id) AS current_occupancy,
-    (enclosure_max_capacity - f_calculate_current_occupancy(enclosure_id)) AS available_spots,
-    ROUND(f_calculate_current_occupancy(enclosure_id) / enclosure_max_capacity * 100, 1) AS pct_full
-FROM enclosure
+    e.enclosure_id,
+    et.enclosure_type_desc,
+    e.enclosure_sanitation_status,
+    e.enclosure_max_capacity,
+    f_calculate_current_occupancy(e.enclosure_id) AS current_occupancy,
+    (e.enclosure_max_capacity - f_calculate_current_occupancy(e.enclosure_id)) AS available_spots,
+    ROUND(f_calculate_current_occupancy(e.enclosure_id) / e.enclosure_max_capacity * 100, 1) AS pct_full
+FROM enclosure e
+LEFT JOIN enclosure_type et ON e.enclosure_id = et.enclosure_id
 ORDER BY pct_full DESC;
 -- ORDER OUTPUT: # enclosure_id, enclosure_sanitation_status, enclosure_max_capacity, current_occupancy, available_spots, pct_full
--- EX OUTPUT: '1', 'Clean', '12', '8', '4', '66.7'
+-- EX OUTPUT: '1', 'Indoor feline enclosure A — young cats. Multi-level climbing trees, hammocks, interactive wand toys, and cozy igloo beds. 
+-- Temperature-regulated with natural light panels. Suitable for kittens and cats under 3 years.', 'Clean',	'8', '8', '0', '100.0'
 
 
 -- 5) Employee Payroll
